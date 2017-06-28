@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+    <definition name="baseLayout" template="/WEB-INF/tiles/template/baselayout.jsp">
+        <put-attribute name="title" value="Shobdo Kolpo" />
+        <put-attribute name="heading" value="Shobdo Kolpo" />
+        <put-attribute name="tagline" value="Share Your Story" />
+        <put-attribute name="navigation" value="/WEB-INF/tiles/template/navigation.jsp" />
+        <put-attribute name="content" value="" />
+        <put-attribute name="footer" value="/WEB-INF/tiles/template/footer.jsp" />
+    </definition>
+
+    <definition name="signup" extends="baseLayout">
+
+        <put-attribute name="content" value="/WEB-INF/pages/signup.jsp" />
+    </definition>
+
+    <definition name="login" extends="baseLayout">
+
+        <put-attribute name="content" value="/WEB-INF/pages/login.jsp" />
+    </definition>
+
+    <definition name="users" extends="baseLayout">
+
+        <put-attribute name="content" value="/WEB-INF/pages/User.jsp" />
+    </definition>
+
+    <definition name="newStory" extends="baseLayout">
+
+        <put-attribute name="content" value="/WEB-INF/pages/newStory.jsp" />
+    </definition>
+
+    <definition name="chapter" extends="baseLayout">
+
+        <put-attribute name="content" value="/WEB-INF/pages/chapter.jsp" />
+    </definition>
+
+    <definition name="stories" extends="baseLayout">
+
+        <put-attribute name="content" value="/WEB-INF/pages/stories.jsp" />
+    </definition>
+
+    <definition name="storyDetails" extends="baseLayout">
+
+        <put-attribute name="content" value="/WEB-INF/pages/storyDetails.jsp" />
+    </definition>
+
+
+
+    <!--similarly, add definition tags for every logical view name. I have skipped this here, but you can find the full definition file in the code bundle of this book.-->
+</tiles-definitions>
