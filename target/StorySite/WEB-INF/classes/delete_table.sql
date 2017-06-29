@@ -1,0 +1,20 @@
+
+DROP TABLE Notify;
+DROP TABLE interest;
+DROP TABLE viewed;
+DROP TABLE readingListDetails;
+DROP TABLE readingList;
+DROP TABLE reading;
+DROP TABLE rates;
+DROP TABLE ChapterComments;
+DROP TABLE StoryComments;
+DROP TABLE Likes;
+DROP TABLE StoryTag;
+DROP TABLE Chapter ;
+DROP TABLE Story;
+DROP TABLE languageTable;
+DROP TABLE Category;
+DROP TABLE CopyRightType;
+DROP TABLE FollowTable;
+DROP TABLE UserProfile;
+DROP TABLE AccountUser;
