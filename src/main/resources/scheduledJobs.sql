@@ -15,3 +15,14 @@ END;
 /
 */
 
+begin
+  dbms_scheduler.create_job(job_name        => 'populate_trending_writer',
+                            job_type        => 'STORED_PROCEDURE',
+                            job_action      => 'populateTrendingWriter',
+                            start_date      => sysdate,
+                            repeat_interval => 'freq=daily; INTERVAL=7',
+                            end_date        => null,
+                            enabled         => true,
+                            comments        => 'Update userprofile for finding trending writers');
+end;
+  go

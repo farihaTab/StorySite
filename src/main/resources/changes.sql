@@ -31,3 +31,25 @@ CREATE TABLE RECOMMENDEDtag
   CONSTRAINT pk_recTag PRIMARY KEY (interested,interestedIn),
   CONSTRAINT fk_recTag_username FOREIGN KEY(interested) REFERENCES AccountUser(username) ON DELETE CASCADE
 );
+
+DROP TABLE FollowTable;
+CREATE TABLE FollowTable
+(
+  follower  VARCHAR2(20) not null,
+  followed 	VARCHAR2(20) not null,
+  updatedAt DATE DEFAULT SYSDATE,
+  CONSTRAINT pk_followtable PRIMARY KEY (follower, followed),
+  Constraint fk_ft_follower FOREIGN KEY(follower) REFERENCES AccountUser(username)  ON DELETE CASCADE ,
+  Constraint fk_ft_followed FOREIGN KEY(followed) REFERENCES AccountUser(username)  ON DELETE CASCADE
+);
+
+CREATE TABLE RECOMMENDEDstory
+(
+  interested VARCHAR2(20),--username
+  interestedIn INTEGER, --tagNAME
+  interestRating NUMBER(9,2),
+  CONSTRAINT pk_recTag PRIMARY KEY (interested,interestedIn),
+  CONSTRAINT fk_recTag_username FOREIGN KEY(interested) REFERENCES AccountUser(username) ON DELETE CASCADE
+);
+
+
