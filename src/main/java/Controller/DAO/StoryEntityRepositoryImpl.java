@@ -196,7 +196,7 @@ public class StoryEntityRepositoryImpl implements StoryEntityRepository {
 
             String hql = "update Model.StoryEntity s set s.readcount=s.readcount+1 where s.readcount = :storyid";
             Query query = session.createQuery(hql);
-            query.setParameter("storyid",readingEntity.getReadstory());
+            query.setParameter("storyid",temp.getReadstory());
             query.executeUpdate();
 
             System.out.println("null found");
