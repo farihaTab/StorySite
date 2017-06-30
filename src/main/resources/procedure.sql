@@ -43,6 +43,72 @@ CREATE OR REPLACE PROCEDURE findInterestedTag ( uname IN VARCHAR2) IS
   END ;
 /
 
+CREATE OR REPLACE PROCEDURE findInterestedStory ( uname IN VARCHAR2) IS
+  i NUMBER;
+  j NUMBER;
+  sid VARCHAR2(20);
+  BEGIN
+    i:=0;
+
+    FOR R IN (     ( SELECT RECOMMENDEDCATEGORY.INTERESTED
+    FROM RECOMMENDEDCATEGORY
+    WHERE RECOMMENDEDCATEGORY.INTERESTEDIN = (
+    SELECT INTERESTEDIN
+    FROM RECOMMENDEDCATEGORY
+    WHERE RECOMMENDEDCATEGORY.INTERESTED = uname
+      --AND RECOMMENDEDCATEGORY.INTERESTRATING IN (1,2)
+    )
+    AND RECOMMENDEDCATEGORY.INTERESTED <> uname
+    )
+    INTERSECT
+    (
+    SELECT RECOMMENDEDTAG.INTERESTED
+    FROM RECOMMENDEDTAG
+    WHERE RECOMMENDEDTAG.INTERESTEDIN IN (
+      SELECT INTERESTEDIN
+      FROM RECOMMENDEDTAG
+      WHERE RECOMMENDEDTAG.INTERESTED = uname
+    )
+          AND RECOMMENDEDTAG.INTERESTED <> uname
+    )
+    )
+    LOOP
+      DBMS_OUTPUT.PUT_LINE('neighbour '||R.INTERESTED) ;
+      sid := R.INTERESTED;
+      j := 0;
+
+      FOR R IN (
+      SELECT LIKEDSTORY
+      FROM LIKES
+      WHERE LIKEDBY = sid
+            AND LIKEDSTORY IN (SELECT storyid
+                               FROM STORY
+                               WHERE CATEGORYNAME IN
+                                     (SELECT INTERESTEDIN
+                                      FROM RECOMMENDEDCATEGORY
+                                      WHERE INTERESTED = sid)
+      )
+
+      )
+      LOOP
+        SELECT LIKEDSTORY INTO sid FROM LIKES WHERE LIKEDSTORY = R.LIKEDSTORY AND LIKEDBY = uname;
+        IF SQL%ROWCOUNT = 0 THEN
+          INSERT INTO RECOMMENDEDSTORY (INTERESTED, INTERESTEDIN, INTERESTRATING)
+          VALUES (uname, R.LIKEDSTORY, j+1);
+          END IF ;
+        j := j+1;
+        EXIT WHEN (j = 3);
+      END LOOP;
+
+
+      i := i+1;
+      EXIT WHEN (i = 5 ) ;
+    END LOOP;
+
+  END ;
+/
+
+
 CREATE OR REPLACE PROCEDURE populateRecommendation IS
   i NUMBER;
   BEGIN
@@ -92,64 +158,7 @@ BEGIN
 END ;
 /
 
-CREATE OR REPLACE PROCEDURE findInterestedStory ( uname IN VARCHAR2) IS
-  i NUMBER;
-  j NUMBER;
-  sid VARCHAR2(20);
-  BEGIN
-    i:=0;
 
-    FOR R IN (     SELECT RECOMMENDEDCATEGORY.INTERESTED
-                   FROM RECOMMENDEDCATEGORY
-                   WHERE RECOMMENDEDCATEGORY.INTERESTEDIN = (
-                     SELECT INTERESTEDIN FROM RECOMMENDEDCATEGORY
-                     WHERE RECOMMENDEDCATEGORY.INTERESTED = uname
-                           --AND RECOMMENDEDCATEGORY.INTERESTRATING IN (1,2)
-                   )
-                    AND RECOMMENDEDCATEGORY.INTERESTED <> uname
-                  INTERSECT
-                  SELECT RECOMMENDEDTAG.INTERESTED
-                  FROM RECOMMENDEDTAG
-       WHERE RECOMMENDEDTAG.INTERESTEDIN IN (
-                    SELECT INTERESTEDIN FROM RECOMMENDEDTAG
-                    WHERE RECOMMENDEDTAG.INTERESTED = uname
-                  )
-                    AND RECOMMENDEDTAG.INTERESTED <>uname
-    )
-    LOOP
-      DBMS_OUTPUT.PUT_LINE('neighbour '||R.INTERESTED) ;
-      sid := R.INTERESTED;
-      j := 0;
-
-      FOR R IN (
-      SELECT READSTORY
-      FROM READING
-      WHERE READBY = sid
-            AND READBY <> uname
-            AND READSTORY IN (SELECT storyid
-                              FROM STORY
-                              WHERE CATEGORYNAME IN
-                                    (SELECT INTERESTEDIN
-                                     FROM RECOMMENDEDCATEGORY
-                                     WHERE INTERESTED = uname)
-                              )
-      ORDER BY LASTREADAT DESC
-      )
-      LOOP
-
-        INSERT INTO RECOMMENDEDSTORY (INTERESTED, INTERESTEDIN, INTERESTRATING)
-        VALUES (uname, R.READSTORY, j+1);
-        j := j+1;
-        EXIT WHEN (j = 3);
-      END LOOP;
-
-
-      i := i+1;
-      EXIT WHEN (i = 5 ) ;
-    END LOOP;
-
-  END ;
-/
 
 
 DECLARE
