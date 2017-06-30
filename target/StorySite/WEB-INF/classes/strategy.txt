@@ -1,0 +1,8 @@
+strategy to recommed user stories from a particular story:
+1. recommend the most popular work of the writer of same genre
+2. find 5 user who read the story atleast half and choose 5 stories of same genre
+ they currently liked and read
+
+how to recommend user stories:
+1. find 5 user who also also have same recommended genre in same order
+2. find what they are currently reading and choose from them

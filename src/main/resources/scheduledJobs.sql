@@ -25,4 +25,5 @@ begin
                             enabled         => true,
                             comments        => 'Update userprofile for finding trending writers');
 end;
-  go
+
+

@@ -45,11 +45,16 @@ CREATE TABLE FollowTable
 
 CREATE TABLE RECOMMENDEDstory
 (
-  interested VARCHAR2(20),--username
+  interested VARCHAR2(20),--storyid
   interestedIn INTEGER, --tagNAME
   interestRating NUMBER(9,2),
-  CONSTRAINT pk_recTag PRIMARY KEY (interested,interestedIn),
-  CONSTRAINT fk_recTag_username FOREIGN KEY(interested) REFERENCES AccountUser(username) ON DELETE CASCADE
+  CONSTRAINT pk_recStory PRIMARY KEY (interested,interestedIn),
+  CONSTRAINT fk_recStory_username FOREIGN KEY(interested) REFERENCES AccountUser(username) ON DELETE CASCADE
 );
 
+update STORY
+    SET STORY.CHAPTERCOUNT = (select count(*) from CHAPTER GROUP BY CHAPTER.BELONGSTO)
+WHERE STORY.STORYID = CHAPTER.BELONGSTO;
 
+
+INSERT INTO LIKES (LIKEDBY, LIKEDSTORY) VALUES ('fariha',);
