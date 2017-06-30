@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6fb0dfff-6ffa-4b8a-aeb0-dfc32a4a566e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/StorySite.war" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/0429850a-5af9-422a-8fd2-b4c333a832a5/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/0429850a-5af9-422a-8fd2-b4c333a832a5/_metadata_/metadata" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/0429850a-5af9-422a-8fd2-b4c333a832a5/_metadata_/metadata.keystream" afterPath="$PROJECT_DIR$/.idea/dataSources/0429850a-5af9-422a-8fd2-b4c333a832a5/_metadata_/metadata.keystream" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/0429850a-5af9-422a-8fd2-b4c333a832a5/_metadata_/metadata.keystream.len" afterPath="$PROJECT_DIR$/.idea/dataSources/0429850a-5af9-422a-8fd2-b4c333a832a5/_metadata_/metadata.keystream.len" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/0429850a-5af9-422a-8fd2-b4c333a832a5/_metadata_/metadata.len" afterPath="$PROJECT_DIR$/.idea/dataSources/0429850a-5af9-422a-8fd2-b4c333a832a5/_metadata_/metadata.len" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/0429850a-5af9-422a-8fd2-b4c333a832a5/_metadata_/metadata.values.at" afterPath="$PROJECT_DIR$/.idea/dataSources/0429850a-5af9-422a-8fd2-b4c333a832a5/_metadata_/metadata.values.at" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/0429850a-5af9-422a-8fd2-b4c333a832a5/_metadata_/metadata_i" afterPath="$PROJECT_DIR$/.idea/dataSources/0429850a-5af9-422a-8fd2-b4c333a832a5/_metadata_/metadata_i" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/0429850a-5af9-422a-8fd2-b4c333a832a5/_src_/schema/SDPROJECT.zip" afterPath="$PROJECT_DIR$/.idea/dataSources/0429850a-5af9-422a-8fd2-b4c333a832a5/_src_/schema/SDPROJECT.zip" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/0429850a-5af9-422a-8fd2-b4c333a832a5.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/0429850a-5af9-422a-8fd2-b4c333a832a5.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/changes.sql" afterPath="$PROJECT_DIR$/src/main/resources/changes.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/procedure.sql" afterPath="$PROJECT_DIR$/src/main/resources/procedure.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/scheduledJobs.sql" afterPath="$PROJECT_DIR$/src/main/resources/scheduledJobs.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/trigger.sql" afterPath="$PROJECT_DIR$/src/main/resources/trigger.sql" />
     </list>
     <ignored path="StorySite.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,8 +63,8 @@
       <file leaf-file-name="procedure.sql" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/procedure.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="124" column="6" lean-forward="false" selection-start-line="124" selection-start-column="6" selection-end-line="124" selection-end-column="6" />
+            <state relative-caret-position="527">
+              <caret line="64" column="40" lean-forward="true" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -116,7 +104,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/changes.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="481">
-              <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="59" />
+              <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -1228,16 +1216,16 @@
       <workItem from="1498655452056" duration="1132000" />
       <workItem from="1498715887430" duration="661000" />
       <workItem from="1498716864419" duration="24120000" />
-      <workItem from="1498807189944" duration="13154000" />
+      <workItem from="1498807189944" duration="19610000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="243246000" />
+    <option name="totallyTimeSpent" value="249702000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1247,7 +1235,7 @@
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13086233" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.204236" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27609682" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1590,32 +1578,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/4b1b4aca/0429850a-5af9-422a-8fd2-b4c333a832a5/SDPROJECT.RECOMMENDEDSTORY">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/4b1b4aca/0429850a-5af9-422a-8fd2-b4c333a832a5/SDPROJECT.RECOMMENDEDCATEGORY">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/4b1b4aca/0429850a-5af9-422a-8fd2-b4c333a832a5/SDPROJECT.RECOMMENDEDTAG">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1674,7 +1636,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/changes.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="481">
-          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="59" />
+          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1721,10 +1683,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="dbDummy://dbtable:/4b1b4aca/0429850a-5af9-422a-8fd2-b4c333a832a5/SDPROJECT.RECOMMENDEDCATEGORY">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/4b1b4aca/0429850a-5af9-422a-8fd2-b4c333a832a5/SDPROJECT.RECOMMENDEDSTORY">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/procedure.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="124" column="6" lean-forward="false" selection-start-line="124" selection-start-column="6" selection-end-line="124" selection-end-column="6" />
+        <state relative-caret-position="527">
+          <caret line="64" column="40" lean-forward="true" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
           <folding />
         </state>
       </provider>

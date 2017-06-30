@@ -3,12 +3,13 @@ CREATE OR REPLACE PROCEDURE findInterestedCategory ( uname IN VARCHAR2) IS
 BEGIN
   i:=0;
 
-  FOR R IN ( select CATEGORYNAME, COUNT(*) TOTAL
-              from STORY JOIN LIKES
-              ON STORY.STORYID = LIKES.LIKEDSTORY
-              WHERE LIKES.LIKEDBY = uname
+  FOR R IN ( select STORY.CATEGORYNAME , count(*) total
+              from likes join STORY
+              On LIKES.LIKEDSTORY = STORY.STORYID
+                WHERE LIKES.LIKEDBY = uname
               GROUP BY STORY.CATEGORYNAME
-              ORDER BY TOTAL ASC)
+              ORDER BY total DESC
+  )
   LOOP
     DBMS_OUTPUT.PUT_LINE('cat '||R.CATEGORYNAME) ;
     INSERT INTO RECOMMENDEDCATEGORY (INTERESTED, INTERESTEDIN, INTERESTRATING)
@@ -16,6 +17,10 @@ BEGIN
     i := i+1;
     EXIT WHEN (i = 5 ) ;
   END LOOP;
+EXCEPTION
+  WHEN OTHERS THEN
+  DBMS_OUTPUT.PUT_LINE('I dont know what happened!') ;
+
 END ;
 /
 
@@ -39,72 +44,59 @@ CREATE OR REPLACE PROCEDURE findInterestedTag ( uname IN VARCHAR2) IS
       i := i+1;
       EXIT WHEN (i = 5 ) ;
     END LOOP;
-
+    EXCEPTION
+    WHEN OTHERS THEN
+    DBMS_OUTPUT.PUT_LINE('I dont know what happened!') ;
   END ;
 /
 
 CREATE OR REPLACE PROCEDURE findInterestedStory ( uname IN VARCHAR2) IS
   i NUMBER;
   j NUMBER;
-  sid VARCHAR2(20);
+  nbour VARCHAR2(20);
+  sid NUMBER;
   BEGIN
     i:=0;
-
-    FOR R IN (     ( SELECT RECOMMENDEDCATEGORY.INTERESTED
-    FROM RECOMMENDEDCATEGORY
-    WHERE RECOMMENDEDCATEGORY.INTERESTEDIN = (
-    SELECT INTERESTEDIN
-    FROM RECOMMENDEDCATEGORY
-    WHERE RECOMMENDEDCATEGORY.INTERESTED = uname
-      --AND RECOMMENDEDCATEGORY.INTERESTRATING IN (1,2)
-    )
-    AND RECOMMENDEDCATEGORY.INTERESTED <> uname
-    )
-    INTERSECT
-    (
-    SELECT RECOMMENDEDTAG.INTERESTED
-    FROM RECOMMENDEDTAG
-    WHERE RECOMMENDEDTAG.INTERESTEDIN IN (
-      SELECT INTERESTEDIN
-      FROM RECOMMENDEDTAG
-      WHERE RECOMMENDEDTAG.INTERESTED = uname
-    )
-          AND RECOMMENDEDTAG.INTERESTED <> uname
-    )
+    j := 0;
+    FOR R IN (
+            select RC.INTERESTED neighbour , COUNT(RC.INTERESTED) total
+            from RECOMMENDEDCATEGORY rc join RECOMMENDEDTAG rt
+            on RC.INTERESTED = RT.INTERESTED
+            WHERE RT.INTERESTED <> uname
+            AND RC.INTERESTEDIN in (SELECT r.INTERESTEDIN from RECOMMENDEDCATEGORY r WHERE r.INTERESTED = uname)
+            AND RT.INTERESTEDIN in (SELECT rr.INTERESTEDIN from RECOMMENDEDTAG rr WHERE rr.INTERESTED = uname)
+            GROUP BY RC.Interested
+            ORDER BY total desc
     )
     LOOP
-      DBMS_OUTPUT.PUT_LINE('neighbour '||R.INTERESTED) ;
-      sid := R.INTERESTED;
-      j := 0;
+      DBMS_OUTPUT.PUT_LINE('neighbour '||R.neighbour) ;
+      nbour := R.neighbour;
 
-      FOR R IN (
-      SELECT LIKEDSTORY
-      FROM LIKES
-      WHERE LIKEDBY = sid
-            AND LIKEDSTORY IN (SELECT storyid
-                               FROM STORY
-                               WHERE CATEGORYNAME IN
-                                     (SELECT INTERESTEDIN
-                                      FROM RECOMMENDEDCATEGORY
-                                      WHERE INTERESTED = sid)
-      )
-
+      FOR R IN (  SELECT LIKEDSTORY
+                  FROM LIKES
+                  WHERE LIKEDBY = nbour
+                  AND LIKEDSTORY not in (SELECT LIKEDSTORY from LIKES WHERE LIKEDBY = uname)
+                  AND LIKEDSTORY IN (SELECT storyid
+                  FROM STORY
+                  WHERE CATEGORYNAME IN  (SELECT INTERESTEDIN
+                  FROM RECOMMENDEDCATEGORY
+                  WHERE INTERESTED = uname)
+                  )
       )
       LOOP
-        SELECT LIKEDSTORY INTO sid FROM LIKES WHERE LIKEDSTORY = R.LIKEDSTORY AND LIKEDBY = uname;
-        IF SQL%ROWCOUNT = 0 THEN
+        SELECT count(INTERESTEDIN) into sid FROM RECOMMENDEDSTORY WHERE INTERESTED = uname AND INTERESTEDIN = R.LIKEDSTORY;
+        IF sid = 0 THEN
           INSERT INTO RECOMMENDEDSTORY (INTERESTED, INTERESTEDIN, INTERESTRATING)
           VALUES (uname, R.LIKEDSTORY, j+1);
+          j := j+1;
           END IF ;
-        j := j+1;
-        EXIT WHEN (j = 3);
       END LOOP;
-
-
       i := i+1;
-      EXIT WHEN (i = 5 ) ;
+      EXIT WHEN (j = 25 ) ;
     END LOOP;
-
+/*EXCEPTION
+WHEN OTHERS THEN
+DBMS_OUTPUT.PUT_LINE('I dont know what happened!') ;*/
   END ;
 /
 
