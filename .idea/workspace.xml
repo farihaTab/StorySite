@@ -5,38 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6fb0dfff-6ffa-4b8a-aeb0-dfc32a4a566e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Model/StoriesByTag.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/StorySite.war" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/StorySite/WEB-INF/pages/home1.jsp" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/0429850a-5af9-422a-8fd2-b4c333a832a5/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/0429850a-5af9-422a-8fd2-b4c333a832a5/_metadata_/metadata" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/0429850a-5af9-422a-8fd2-b4c333a832a5/_metadata_/metadata.values.at" afterPath="$PROJECT_DIR$/.idea/dataSources/0429850a-5af9-422a-8fd2-b4c333a832a5/_metadata_/metadata.values.at" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/Controller/DAO/StoryEntityRepository.class" afterPath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/Controller/DAO/StoryEntityRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/Controller/DAO/StoryEntityRepositoryImpl.class" afterPath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/Controller/DAO/StoryEntityRepositoryImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/Controller/Service/StoryEntityService.class" afterPath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/Controller/Service/StoryEntityService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/Controller/Service/StoryEntityServiceImpl.class" afterPath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/Controller/Service/StoryEntityServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/Controller/StoryEntityController.class" afterPath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/Controller/StoryEntityController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/Model/AccountuserEntity.class" afterPath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/Model/AccountuserEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/Model/FollowtableEntity.class" afterPath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/Model/FollowtableEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/Model/FollowtableEntityPK.class" afterPath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/Model/FollowtableEntityPK.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/Model/StoryEntity.class" afterPath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/Model/StoryEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/Model/UserprofileEntity.class" afterPath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/Model/UserprofileEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Model/AccountuserEntity.class" afterPath="$PROJECT_DIR$/target/classes/Model/AccountuserEntity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Model/StoriesByWriter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/0429850a-5af9-422a-8fd2-b4c333a832a5.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/0429850a-5af9-422a-8fd2-b4c333a832a5.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StorySite.iml" afterPath="$PROJECT_DIR$/StorySite.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Controller/DAO/StoryEntityRepository.java" afterPath="$PROJECT_DIR$/src/main/java/Controller/DAO/StoryEntityRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Controller/DAO/StoryEntityRepositoryImpl.java" afterPath="$PROJECT_DIR$/src/main/java/Controller/DAO/StoryEntityRepositoryImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Controller/Service/StoryEntityService.java" afterPath="$PROJECT_DIR$/src/main/java/Controller/Service/StoryEntityService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Controller/Service/StoryEntityServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/Controller/Service/StoryEntityServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Controller/StoryEntityController.java" afterPath="$PROJECT_DIR$/src/main/java/Controller/StoryEntityController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Model/AccountuserEntity.java" afterPath="$PROJECT_DIR$/src/main/java/Model/AccountuserEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Model/FollowtableEntityPK.java" afterPath="$PROJECT_DIR$/src/main/java/Model/FollowtableEntityPK.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/changes.sql" afterPath="$PROJECT_DIR$/src/main/resources/changes.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/procedure.sql" afterPath="$PROJECT_DIR$/src/main/resources/procedure.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/changes.sql" afterPath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/changes.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/procedure.sql" afterPath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/procedure.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/scheduledJobs.sql" afterPath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/scheduledJobs.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/StorySite/WEB-INF/mvc-dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/target/StorySite/WEB-INF/mvc-dispatcher-servlet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/StorySite/WEB-INF/pages/home.jsp" afterPath="$PROJECT_DIR$/target/StorySite/WEB-INF/pages/home.jsp" />
     </list>
     <ignored path="StorySite.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -115,7 +94,7 @@
         <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$GroupNode" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
-        <option name="myItemId" value="LIKES" />
+        <option name="myItemId" value="FOLLOWTABLE" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
@@ -140,33 +119,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="home.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="home.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="341" column="56" lean-forward="false" selection-start-line="341" selection-start-column="56" selection-end-line="341" selection-end-column="56" />
+            <state relative-caret-position="1428">
+              <caret line="410" column="0" lean-forward="true" selection-start-line="410" selection-start-column="0" selection-end-line="410" selection-end-column="0" />
               <folding>
-                <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#c:forEach#0;n#jsp:root#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="e#7479#10863#0#JSP" expanded="false" />
-                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="e#20286#23724#0#JSP" expanded="false" />
-                <element signature="e#23726#26283#0#JSP" expanded="false" />
-                <element signature="e#26287#28864#0#JSP" expanded="false" />
-                <element signature="e#28867#31456#0#JSP" expanded="false" />
-                <element signature="e#31458#34017#0#JSP" expanded="false" />
-                <marker date="1498922904310" expanded="false" signature="7596:7622" ph="..." />
-                <marker date="1498922904310" expanded="false" signature="20453:20479" ph="..." />
-                <marker date="1498922904310" expanded="false" signature="23822:23848" ph="..." />
-                <marker date="1498922904310" expanded="false" signature="26403:26429" ph="..." />
-                <marker date="1498922904310" expanded="false" signature="28995:29021" ph="..." />
-                <marker date="1498922904310" expanded="false" signature="31556:31582" ph="..." />
+                <element signature="e#23742#26299#0#JSP" expanded="false" />
+                <element signature="e#26303#28880#0#JSP" expanded="false" />
+                <element signature="e#28883#31472#0#JSP" expanded="false" />
+                <element signature="e#31474#34033#0#JSP" expanded="false" />
+                <marker date="1498938981802" expanded="false" signature="7596:7622" ph="..." />
+                <marker date="1498938981802" expanded="false" signature="20469:20495" ph="..." />
+                <marker date="1498938981802" expanded="false" signature="23838:23864" ph="..." />
+                <marker date="1498938981802" expanded="false" signature="26419:26445" ph="..." />
+                <marker date="1498938981802" expanded="false" signature="29011:29037" ph="..." />
+                <marker date="1498938981802" expanded="false" signature="31572:31598" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StoryEntityServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Controller/Service/StoryEntityServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="122" column="36" lean-forward="false" selection-start-line="122" selection-start-column="21" selection-end-line="122" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StoryEntityRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Controller/DAO/StoryEntityRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="32" column="29" lean-forward="false" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="procedure.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/procedure.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="145" column="0" lean-forward="true" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -174,46 +175,84 @@
       <file leaf-file-name="StoryEntityController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Controller/StoryEntityController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+            <state relative-caret-position="335">
+              <caret line="136" column="9" lean-forward="true" selection-start-line="136" selection-start-column="9" selection-end-line="136" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StoriesByTag.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Model/StoriesByTag.java">
+      <file leaf-file-name="changes.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/changes.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+            <state relative-caret-position="17">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="11" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserprofileEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Model/UserprofileEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-459">
+              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SDPROJECT.FOLLOWTABLE" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/4b1b4aca/0429850a-5af9-422a-8fd2-b4c333a832a5/SDPROJECT.FOLLOWTABLE">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StoryEntityRepositoryImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Controller/DAO/StoryEntityRepositoryImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="578" column="31" lean-forward="false" selection-start-line="578" selection-start-column="31" selection-end-line="578" selection-end-column="31" />
               <folding>
-                <element signature="e#354#355#0" expanded="true" />
-                <element signature="e#392#393#0" expanded="true" />
-                <element signature="e#422#423#0" expanded="true" />
-                <element signature="e#473#474#0" expanded="true" />
-                <element signature="e#503#504#0" expanded="true" />
-                <element signature="e#566#567#0" expanded="true" />
-                <element signature="e#604#605#0" expanded="true" />
+                <element signature="e#19169#19183#0" expanded="true" />
+                <element signature="e#19935#19949#0" expanded="true" />
+                <element signature="e#22295#22312#0" expanded="true" />
+                <marker date="1498938172763" expanded="true" signature="23495:23532" ph="SELECT STORY... dual" />
+                <marker date="1498938172763" expanded="true" signature="23765:23891" ph="INSERT INTO STORY... " />
+                <marker date="1498938172763" expanded="true" signature="25321:25367" ph="SELECT LASTC... STORY" />
+                <marker date="1498938172763" expanded="true" signature="26225:26278" ph="INSERT INTO STORYTAG... " />
+                <marker date="1498938172763" expanded="true" signature="27029:27152" ph="SELECT * FRO... STORY" />
+                <marker date="1498938172763" expanded="true" signature="28445:28492" ph="SELECT CHAPT... STORY" />
+                <marker date="1498938172763" expanded="true" signature="28941:28988" ph="SELECT FIRST... STORY" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StoryEntityRepositoryImpl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Controller/DAO/StoryEntityRepositoryImpl.java">
+      <file leaf-file-name="StoriesByWriter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Model/StoriesByWriter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="490" column="48" lean-forward="false" selection-start-line="490" selection-start-column="48" selection-end-line="490" selection-end-column="48" />
+            <state relative-caret-position="102">
+              <caret line="18" column="33" lean-forward="false" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
               <folding>
-                <element signature="e#19169#19183#0" expanded="true" />
-                <element signature="e#19935#19949#0" expanded="true" />
-                <marker date="1498933286198" expanded="true" signature="21736:21773" ph="SELECT STORY... dual" />
-                <marker date="1498933286198" expanded="true" signature="22006:22132" ph="INSERT INTO STORY... " />
-                <marker date="1498933286198" expanded="true" signature="23562:23608" ph="SELECT LASTC... STORY" />
-                <marker date="1498933286198" expanded="true" signature="24466:24519" ph="INSERT INTO STORYTAG... " />
-                <marker date="1498933286198" expanded="true" signature="25270:25393" ph="SELECT * FRO... STORY" />
-                <marker date="1498933286198" expanded="true" signature="26686:26733" ph="SELECT CHAPT... STORY" />
-                <marker date="1498933286198" expanded="true" signature="27182:27229" ph="SELECT FIRST... STORY" />
+                <element signature="e#542#543#0" expanded="true" />
+                <element signature="e#590#591#0" expanded="true" />
+                <element signature="e#630#631#0" expanded="true" />
+                <element signature="e#685#686#0" expanded="true" />
+                <element signature="e#725#726#0" expanded="true" />
+                <element signature="e#916#917#0" expanded="true" />
+                <element signature="e#952#953#0" expanded="true" />
+                <element signature="e#1026#1027#0" expanded="true" />
+                <element signature="e#1076#1077#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -275,7 +314,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/Validator/NewStoryValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/Model/ReadingEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/Model/ReadinglistEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/Model/ChapterEntity.java" />
@@ -313,19 +351,20 @@
         <option value="$PROJECT_DIR$/src/main/resources/strategy.txt" />
         <option value="$PROJECT_DIR$/src/main/resources/scheduledJobs.sql" />
         <option value="$PROJECT_DIR$/src/main/resources/trigger.sql" />
-        <option value="$PROJECT_DIR$/src/main/resources/changes.sql" />
-        <option value="$PROJECT_DIR$/src/main/resources/procedure.sql" />
         <option value="$PROJECT_DIR$/src/main/java/Model/StoryEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/Model/StoryDetails.java" />
         <option value="$PROJECT_DIR$/src/main/java/Model/FollowtableEntityPK.java" />
         <option value="$PROJECT_DIR$/src/main/java/Model/AccountuserEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/Model/StoriesByTag.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/procedure.sql" />
+        <option value="$PROJECT_DIR$/src/main/resources/changes.sql" />
         <option value="$PROJECT_DIR$/src/main/java/Controller/Service/StoryEntityService.java" />
         <option value="$PROJECT_DIR$/src/main/java/Controller/Service/StoryEntityServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Controller/DAO/StoryEntityRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Model/StoriesByWriter.java" />
         <option value="$PROJECT_DIR$/src/main/java/Controller/StoryEntityController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/Controller/DAO/StoryEntityRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/Controller/DAO/StoryEntityRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp" />
       </list>
     </option>
   </component>
@@ -447,6 +486,10 @@
               <option name="myItemId" value="webapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -463,6 +506,62 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StorySite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StorySite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StorySite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StorySite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -485,32 +584,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StorySite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StorySite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1395,12 +1468,12 @@
       <workItem from="1498807189944" duration="19610000" />
       <workItem from="1498900873837" duration="9172000" />
       <workItem from="1498912634154" duration="779000" />
-      <workItem from="1498914158889" duration="10291000" />
+      <workItem from="1498914158889" duration="15167000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="269944000" />
+    <option name="totallyTimeSpent" value="274820000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1430,7 +1503,7 @@
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2927383" sideWeight="0.2831424" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2322239" sideWeight="0.7168576" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23298033" sideWeight="0.7168576" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1509,14 +1582,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/UploadController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="31" column="5" lean-forward="false" selection-start-line="28" selection-start-column="3" selection-end-line="31" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home1.jsp" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Model/ReadingEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
@@ -1610,18 +1675,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/message.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/4b1b4aca/0429850a-5af9-422a-8fd2-b4c333a832a5/SDPROJECT.USERPROFILE">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
@@ -1840,22 +1893,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Model/UserprofileEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/changes.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="59" column="59" lean-forward="false" selection-start-line="59" selection-start-column="59" selection-end-line="59" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Model/StoryEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1872,14 +1909,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/procedure.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="83" column="19" lean-forward="true" selection-start-line="83" selection-start-column="19" selection-end-line="83" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Model/AccountuserEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
@@ -1890,30 +1919,6 @@
             <marker date="1498915065166" expanded="false" signature="9284:9295" ph=" { " />
             <marker date="1498915065166" expanded="false" signature="9324:9330" ph=" }" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/Service/StoryEntityService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="32" column="71" lean-forward="false" selection-start-line="32" selection-start-column="71" selection-end-line="32" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/DAO/StoryEntityRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="31" column="71" lean-forward="false" selection-start-line="31" selection-start-column="71" selection-end-line="31" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/Service/StoryEntityServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-132">
-          <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1933,57 +1938,142 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp">
+    <entry file="dbDummy://dbtable:/4b1b4aca/0429850a-5af9-422a-8fd2-b4c333a832a5/SDPROJECT.USERPROFILE">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/4b1b4aca/0429850a-5af9-422a-8fd2-b4c333a832a5/SDPROJECT.FOLLOWTABLE">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Model/UserprofileEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="341" column="56" lean-forward="false" selection-start-line="341" selection-start-column="56" selection-end-line="341" selection-end-column="56" />
+        <state relative-caret-position="-459">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/changes.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="11" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/procedure.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="145" column="0" lean-forward="true" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/Service/StoryEntityService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="33" column="71" lean-forward="false" selection-start-line="33" selection-start-column="71" selection-end-line="33" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Model/StoriesByWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="18" column="33" lean-forward="false" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
           <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#c:forEach#0;n#jsp:root#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#7479#10863#0#JSP" expanded="false" />
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#20286#23724#0#JSP" expanded="false" />
-            <element signature="e#23726#26283#0#JSP" expanded="false" />
-            <element signature="e#26287#28864#0#JSP" expanded="false" />
-            <element signature="e#28867#31456#0#JSP" expanded="false" />
-            <element signature="e#31458#34017#0#JSP" expanded="false" />
-            <marker date="1498922904310" expanded="false" signature="7596:7622" ph="..." />
-            <marker date="1498922904310" expanded="false" signature="20453:20479" ph="..." />
-            <marker date="1498922904310" expanded="false" signature="23822:23848" ph="..." />
-            <marker date="1498922904310" expanded="false" signature="26403:26429" ph="..." />
-            <marker date="1498922904310" expanded="false" signature="28995:29021" ph="..." />
-            <marker date="1498922904310" expanded="false" signature="31556:31582" ph="..." />
+            <element signature="e#542#543#0" expanded="true" />
+            <element signature="e#590#591#0" expanded="true" />
+            <element signature="e#630#631#0" expanded="true" />
+            <element signature="e#685#686#0" expanded="true" />
+            <element signature="e#725#726#0" expanded="true" />
+            <element signature="e#916#917#0" expanded="true" />
+            <element signature="e#952#953#0" expanded="true" />
+            <element signature="e#1026#1027#0" expanded="true" />
+            <element signature="e#1076#1077#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/StoryEntityController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/DAO/StoryEntityRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+        <state relative-caret-position="192">
+          <caret line="32" column="29" lean-forward="false" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Controller/DAO/StoryEntityRepositoryImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="490" column="48" lean-forward="false" selection-start-line="490" selection-start-column="48" selection-end-line="490" selection-end-column="48" />
+        <state relative-caret-position="544">
+          <caret line="578" column="31" lean-forward="false" selection-start-line="578" selection-start-column="31" selection-end-line="578" selection-end-column="31" />
           <folding>
             <element signature="e#19169#19183#0" expanded="true" />
             <element signature="e#19935#19949#0" expanded="true" />
-            <marker date="1498933286198" expanded="true" signature="21736:21773" ph="SELECT STORY... dual" />
-            <marker date="1498933286198" expanded="true" signature="22006:22132" ph="INSERT INTO STORY... " />
-            <marker date="1498933286198" expanded="true" signature="23562:23608" ph="SELECT LASTC... STORY" />
-            <marker date="1498933286198" expanded="true" signature="24466:24519" ph="INSERT INTO STORYTAG... " />
-            <marker date="1498933286198" expanded="true" signature="25270:25393" ph="SELECT * FRO... STORY" />
-            <marker date="1498933286198" expanded="true" signature="26686:26733" ph="SELECT CHAPT... STORY" />
-            <marker date="1498933286198" expanded="true" signature="27182:27229" ph="SELECT FIRST... STORY" />
+            <element signature="e#22295#22312#0" expanded="true" />
+            <marker date="1498938172763" expanded="true" signature="23495:23532" ph="SELECT STORY... dual" />
+            <marker date="1498938172763" expanded="true" signature="23765:23891" ph="INSERT INTO STORY... " />
+            <marker date="1498938172763" expanded="true" signature="25321:25367" ph="SELECT LASTC... STORY" />
+            <marker date="1498938172763" expanded="true" signature="26225:26278" ph="INSERT INTO STORYTAG... " />
+            <marker date="1498938172763" expanded="true" signature="27029:27152" ph="SELECT * FRO... STORY" />
+            <marker date="1498938172763" expanded="true" signature="28445:28492" ph="SELECT CHAPT... STORY" />
+            <marker date="1498938172763" expanded="true" signature="28941:28988" ph="SELECT FIRST... STORY" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/Service/StoryEntityServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="122" column="36" lean-forward="false" selection-start-line="122" selection-start-column="21" selection-end-line="122" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/StoryEntityController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="136" column="9" lean-forward="true" selection-start-line="136" selection-start-column="9" selection-end-line="136" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1428">
+          <caret line="410" column="0" lean-forward="true" selection-start-line="410" selection-start-column="0" selection-end-line="410" selection-end-column="0" />
+          <folding>
+            <element signature="n#c:forEach#0;n#jsp:root#0;n#!!top" expanded="false" />
+            <element signature="e#7479#10863#0#JSP" expanded="false" />
+            <element signature="e#23742#26299#0#JSP" expanded="false" />
+            <element signature="e#26303#28880#0#JSP" expanded="false" />
+            <element signature="e#28883#31472#0#JSP" expanded="false" />
+            <element signature="e#31474#34033#0#JSP" expanded="false" />
+            <marker date="1498938981802" expanded="false" signature="7596:7622" ph="..." />
+            <marker date="1498938981802" expanded="false" signature="20469:20495" ph="..." />
+            <marker date="1498938981802" expanded="false" signature="23838:23864" ph="..." />
+            <marker date="1498938981802" expanded="false" signature="26419:26445" ph="..." />
+            <marker date="1498938981802" expanded="false" signature="29011:29037" ph="..." />
+            <marker date="1498938981802" expanded="false" signature="31572:31598" ph="..." />
           </folding>
         </state>
       </provider>

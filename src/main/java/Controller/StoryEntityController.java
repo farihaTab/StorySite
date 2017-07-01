@@ -128,6 +128,8 @@ public class StoryEntityController {
         ArrayList<StoriesByTag> storiesByTags = storyEntityService.getStoriesByUserLikedTags(username);
         model.addAttribute("storiesByTags",storiesByTags);
         System.out.println("size "+storiesByTags.size());
+        ArrayList<StoriesByWriter> trendingWriter = storyEntityService.getTrendingWritersStories(username);
+        model.addAttribute("trendingWriter",trendingWriter);
 
         return "home";
     }

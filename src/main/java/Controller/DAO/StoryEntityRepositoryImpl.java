@@ -538,6 +538,46 @@ public class StoryEntityRepositoryImpl implements StoryEntityRepository {
         return storiesByTags;
     }
 
+    @Override
+    public ArrayList<StoriesByWriter> getTrendingWritersStories(String username){
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+        System.out.println("stories by writers");
+
+        String hql = "SELECT up.writer " +
+                "from Model.UserprofileEntity up " +
+                "where up.writer not in (SELECT ft.followed from Model.FollowtableEntity ft WHERE ft.follower = :username) " +
+                "ORDER BY up.currentmonthfollower DESC";
+        Query query = session.createQuery(hql);
+        query.setParameter("username",username);
+        query.setMaxResults(5);
+        List<String> writers = query.list();
+
+        ArrayList<StoriesByWriter> storiesByWriters = new ArrayList<StoriesByWriter>();
+        for(String writer: writers){
+            System.out.println("writer: "+writer);
+            hql = "from Model.StoryEntity s where s.writerid = :writer order by s.likecount desc ";
+            query = session.createQuery(hql);
+            query.setParameter("writer",writer);
+            query.setMaxResults(10);
+            ArrayList<StoryEntity> storyEntities = (ArrayList<StoryEntity>) query.list();
+
+            hql = "from Model.UserprofileEntity where  writer = :writerid";
+            query = session.createQuery(hql);
+            query.setParameter("writerid",writer);
+            query.setFirstResult(0);
+            query.setMaxResults(1);
+            UserprofileEntity userprofile = (UserprofileEntity) query.uniqueResult();
+
+            storiesByWriters.add(new StoriesByWriter(writer,userprofile,storyEntities));
+
+        }
+
+        session.flush();
+        session.getTransaction().commit();
+        session.close();
+        return storiesByWriters;
+    }
 
     //*******************************Tamanna****************************//
 

@@ -30,6 +30,7 @@ public interface StoryEntityRepository {
     ArrayList<StoryDetails> getContinueReadingStories(String username);
     ArrayList<StoryDetails> getTrendingStories();
     ArrayList<StoriesByTag> getStoriesByUserLikedTags(String username);
+    ArrayList<StoriesByWriter> getTrendingWritersStories(String username);
 
     //******************tamanna***********************//
 
@@ -43,7 +44,6 @@ public interface StoryEntityRepository {
     int getLastChapter(int storyid);
     boolean insertTag(StoryEntity newStory);
     List<StoryEntity> getSearchResult(String tagname);
-
 
 
 }

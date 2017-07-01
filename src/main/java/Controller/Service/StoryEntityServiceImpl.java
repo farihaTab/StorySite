@@ -119,7 +119,10 @@ public class StoryEntityServiceImpl implements StoryEntityService {
     public ArrayList<StoriesByTag> getStoriesByUserLikedTags(String username){
         return storyEntityRepository.getStoriesByUserLikedTags(username);
     }
-
+    @Override
+    public ArrayList<StoriesByWriter> getTrendingWritersStories(String username){
+        return storyEntityRepository.getTrendingWritersStories(username);
+    }
 
 
 //*******************************tamanna****************************************************//

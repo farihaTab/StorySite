@@ -335,7 +335,7 @@
 
         <span style="display:block; height: 20;"></span> <%--vertical space--%>
 
-        <div class="carousel slide row" data-ride="carousel" data-type="multi" data-interval="4000" id="myCarousel${stories.tag}">
+        <div class="carousel slide row" data-ride="carousel" data-type="multi" data-interval="4000" id="myCarousel${storiesbytag.tag}">
 
             <div class="carousel-inner">
                 <c:set var="idx" value="${0}"/>
@@ -401,12 +401,13 @@
                     <c:set var="idx" value="${idx+1}"/>
                 </c:forEach>
             </div>
-            <a class="left carousel-control" href="#myCarousel${stories.tag}" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
-            <a class="right carousel-control" href="#myCarousel${stories.tag}" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+            <a class="left carousel-control" href="#myCarousel${storiesbytag.tag}" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+            <a class="right carousel-control" href="#myCarousel${storiesbytag.tag}" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
 
         </div>
     </div>
 </c:forEach>
+
 
 <%--
 <div class="container">
