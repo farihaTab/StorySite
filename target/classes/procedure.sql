@@ -130,7 +130,7 @@ CREATE OR REPLACE PROCEDURE populateTrendingWriter IS
   prev DATE;
   BEGIN
     prev := SYSDATE - 30;
-
+    DBMS_OUTPUT.PUT_LINE('prv : ' || prev) ;
     FOR R IN ( SELECT FOLLOWED, COUNT(*) TOTAL
                FROM FOLLOWTABLE
                WHERE FOLLOWTABLE.UPDATEDAT > prev

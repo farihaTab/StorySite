@@ -5,17 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6fb0dfff-6ffa-4b8a-aeb0-dfc32a4a566e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Model/StoriesByWriter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/0429850a-5af9-422a-8fd2-b4c333a832a5.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/0429850a-5af9-422a-8fd2-b4c333a832a5.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/Model/StoriesByWriter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/Model/StoriesByWriter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/StorySite.war" afterPath="$PROJECT_DIR$/target/StorySite.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/Controller/DAO/StoryEntityRepository.class" afterPath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/Controller/DAO/StoryEntityRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/Controller/DAO/StoryEntityRepositoryImpl.class" afterPath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/Controller/DAO/StoryEntityRepositoryImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/Controller/Service/StoryEntityService.class" afterPath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/Controller/Service/StoryEntityService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/Controller/Service/StoryEntityServiceImpl.class" afterPath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/Controller/Service/StoryEntityServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/Controller/StoryEntityController.class" afterPath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/Controller/StoryEntityController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Controller/DAO/StoryEntityRepository.class" afterPath="$PROJECT_DIR$/target/classes/Controller/DAO/StoryEntityRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Controller/DAO/StoryEntityRepositoryImpl.class" afterPath="$PROJECT_DIR$/target/classes/Controller/DAO/StoryEntityRepositoryImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Controller/Service/StoryEntityService.class" afterPath="$PROJECT_DIR$/target/classes/Controller/Service/StoryEntityService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Controller/Service/StoryEntityServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/Controller/Service/StoryEntityServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Controller/StoryEntityController.class" afterPath="$PROJECT_DIR$/target/classes/Controller/StoryEntityController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Controller/DAO/StoryEntityRepository.java" afterPath="$PROJECT_DIR$/src/main/java/Controller/DAO/StoryEntityRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Controller/DAO/StoryEntityRepositoryImpl.java" afterPath="$PROJECT_DIR$/src/main/java/Controller/DAO/StoryEntityRepositoryImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Controller/Service/StoryEntityService.java" afterPath="$PROJECT_DIR$/src/main/java/Controller/Service/StoryEntityService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Controller/Service/StoryEntityServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/Controller/Service/StoryEntityServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Controller/StoryEntityController.java" afterPath="$PROJECT_DIR$/src/main/java/Controller/StoryEntityController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/changes.sql" afterPath="$PROJECT_DIR$/src/main/resources/changes.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/procedure.sql" afterPath="$PROJECT_DIR$/src/main/resources/procedure.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/changes.sql" afterPath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/changes.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/procedure.sql" afterPath="$PROJECT_DIR$/target/StorySite/WEB-INF/classes/procedure.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/StorySite/WEB-INF/pages/home.jsp" afterPath="$PROJECT_DIR$/target/StorySite/WEB-INF/pages/home.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/changes.sql" afterPath="$PROJECT_DIR$/target/classes/changes.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/procedure.sql" afterPath="$PROJECT_DIR$/target/classes/procedure.sql" />
     </list>
     <ignored path="StorySite.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -119,35 +129,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="home.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1428">
-              <caret line="410" column="0" lean-forward="true" selection-start-line="410" selection-start-column="0" selection-end-line="410" selection-end-column="0" />
+            <state relative-caret-position="383">
+              <caret line="482" column="103" lean-forward="false" selection-start-line="482" selection-start-column="103" selection-end-line="482" selection-end-column="103" />
               <folding>
+                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#c:forEach#0;n#jsp:root#0;n#!!top" expanded="false" />
                 <element signature="e#7479#10863#0#JSP" expanded="false" />
-                <element signature="e#23742#26299#0#JSP" expanded="false" />
-                <element signature="e#26303#28880#0#JSP" expanded="false" />
-                <element signature="e#28883#31472#0#JSP" expanded="false" />
-                <element signature="e#31474#34033#0#JSP" expanded="false" />
-                <marker date="1498938981802" expanded="false" signature="7596:7622" ph="..." />
-                <marker date="1498938981802" expanded="false" signature="20469:20495" ph="..." />
-                <marker date="1498938981802" expanded="false" signature="23838:23864" ph="..." />
-                <marker date="1498938981802" expanded="false" signature="26419:26445" ph="..." />
-                <marker date="1498938981802" expanded="false" signature="29011:29037" ph="..." />
-                <marker date="1498938981802" expanded="false" signature="31572:31598" ph="..." />
+                <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="e#28637#31194#0#JSP" expanded="false" />
+                <element signature="e#31198#33775#0#JSP" expanded="false" />
+                <element signature="e#33778#36367#0#JSP" expanded="false" />
+                <element signature="e#36369#38928#0#JSP" expanded="false" />
+                <marker date="1498940300327" expanded="false" signature="7596:7622" ph="..." />
+                <marker date="1498940300327" expanded="false" signature="25364:25390" ph="..." />
+                <marker date="1498940300327" expanded="false" signature="28733:28759" ph="..." />
+                <marker date="1498940300327" expanded="false" signature="31314:31340" ph="..." />
+                <marker date="1498940300327" expanded="false" signature="33906:33932" ph="..." />
+                <marker date="1498940300327" expanded="false" signature="36467:36493" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StoryEntityServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Controller/Service/StoryEntityServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="122" column="36" lean-forward="false" selection-start-line="122" selection-start-column="21" selection-end-line="122" selection-end-column="36" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -217,22 +221,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StoryEntityRepositoryImpl.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="StoryEntityRepositoryImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Controller/DAO/StoryEntityRepositoryImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="578" column="31" lean-forward="false" selection-start-line="578" selection-start-column="31" selection-end-line="578" selection-end-column="31" />
+            <state relative-caret-position="238">
+              <caret line="563" column="46" lean-forward="false" selection-start-line="563" selection-start-column="46" selection-end-line="563" selection-end-column="46" />
               <folding>
                 <element signature="e#19169#19183#0" expanded="true" />
                 <element signature="e#19935#19949#0" expanded="true" />
-                <element signature="e#22295#22312#0" expanded="true" />
-                <marker date="1498938172763" expanded="true" signature="23495:23532" ph="SELECT STORY... dual" />
-                <marker date="1498938172763" expanded="true" signature="23765:23891" ph="INSERT INTO STORY... " />
-                <marker date="1498938172763" expanded="true" signature="25321:25367" ph="SELECT LASTC... STORY" />
-                <marker date="1498938172763" expanded="true" signature="26225:26278" ph="INSERT INTO STORYTAG... " />
-                <marker date="1498938172763" expanded="true" signature="27029:27152" ph="SELECT * FRO... STORY" />
-                <marker date="1498938172763" expanded="true" signature="28445:28492" ph="SELECT CHAPT... STORY" />
-                <marker date="1498938172763" expanded="true" signature="28941:28988" ph="SELECT FIRST... STORY" />
+                <element signature="e#22337#22354#0" expanded="true" />
+                <marker date="1498940004869" expanded="true" signature="23580:23617" ph="SELECT STORY... dual" />
+                <marker date="1498940004869" expanded="true" signature="23850:23976" ph="INSERT INTO STORY... " />
+                <marker date="1498940004869" expanded="true" signature="25406:25452" ph="SELECT LASTC... STORY" />
+                <marker date="1498940004869" expanded="true" signature="26310:26363" ph="INSERT INTO STORYTAG... " />
+                <marker date="1498940004869" expanded="true" signature="27114:27237" ph="SELECT * FRO... STORY" />
+                <marker date="1498940004869" expanded="true" signature="28530:28577" ph="SELECT CHAPT... STORY" />
+                <marker date="1498940004869" expanded="true" signature="29026:29073" ph="SELECT FIRST... STORY" />
               </folding>
             </state>
           </provider>
@@ -271,7 +275,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>/cha</find>
       <find>deleti</find>
       <find>for</find>
       <find>brow</find>
@@ -299,8 +302,9 @@
       <find>storyid</find>
       <find>userprofi</find>
       <find>storyi</find>
-      <find>stories by tags</find>
       <find>Story name</find>
+      <find>stories by tags</find>
+      <find>$</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -1468,12 +1472,12 @@
       <workItem from="1498807189944" duration="19610000" />
       <workItem from="1498900873837" duration="9172000" />
       <workItem from="1498912634154" duration="779000" />
-      <workItem from="1498914158889" duration="15167000" />
+      <workItem from="1498914158889" duration="16689000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="274820000" />
+    <option name="totallyTimeSpent" value="276342000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1498,7 +1502,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3502455" sideWeight="0.86838126" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3502455" sideWeight="0.86838126" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -2014,33 +2018,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/DAO/StoryEntityRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="32" column="29" lean-forward="false" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/DAO/StoryEntityRepositoryImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="578" column="31" lean-forward="false" selection-start-line="578" selection-start-column="31" selection-end-line="578" selection-end-column="31" />
-          <folding>
-            <element signature="e#19169#19183#0" expanded="true" />
-            <element signature="e#19935#19949#0" expanded="true" />
-            <element signature="e#22295#22312#0" expanded="true" />
-            <marker date="1498938172763" expanded="true" signature="23495:23532" ph="SELECT STORY... dual" />
-            <marker date="1498938172763" expanded="true" signature="23765:23891" ph="INSERT INTO STORY... " />
-            <marker date="1498938172763" expanded="true" signature="25321:25367" ph="SELECT LASTC... STORY" />
-            <marker date="1498938172763" expanded="true" signature="26225:26278" ph="INSERT INTO STORYTAG... " />
-            <marker date="1498938172763" expanded="true" signature="27029:27152" ph="SELECT * FRO... STORY" />
-            <marker date="1498938172763" expanded="true" signature="28445:28492" ph="SELECT CHAPT... STORY" />
-            <marker date="1498938172763" expanded="true" signature="28941:28988" ph="SELECT FIRST... STORY" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Controller/Service/StoryEntityServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -2059,21 +2036,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1428">
-          <caret line="410" column="0" lean-forward="true" selection-start-line="410" selection-start-column="0" selection-end-line="410" selection-end-column="0" />
+        <state relative-caret-position="383">
+          <caret line="482" column="103" lean-forward="false" selection-start-line="482" selection-start-column="103" selection-end-line="482" selection-end-column="103" />
           <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#c:forEach#0;n#jsp:root#0;n#!!top" expanded="false" />
             <element signature="e#7479#10863#0#JSP" expanded="false" />
-            <element signature="e#23742#26299#0#JSP" expanded="false" />
-            <element signature="e#26303#28880#0#JSP" expanded="false" />
-            <element signature="e#28883#31472#0#JSP" expanded="false" />
-            <element signature="e#31474#34033#0#JSP" expanded="false" />
-            <marker date="1498938981802" expanded="false" signature="7596:7622" ph="..." />
-            <marker date="1498938981802" expanded="false" signature="20469:20495" ph="..." />
-            <marker date="1498938981802" expanded="false" signature="23838:23864" ph="..." />
-            <marker date="1498938981802" expanded="false" signature="26419:26445" ph="..." />
-            <marker date="1498938981802" expanded="false" signature="29011:29037" ph="..." />
-            <marker date="1498938981802" expanded="false" signature="31572:31598" ph="..." />
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#28637#31194#0#JSP" expanded="false" />
+            <element signature="e#31198#33775#0#JSP" expanded="false" />
+            <element signature="e#33778#36367#0#JSP" expanded="false" />
+            <element signature="e#36369#38928#0#JSP" expanded="false" />
+            <marker date="1498940300327" expanded="false" signature="7596:7622" ph="..." />
+            <marker date="1498940300327" expanded="false" signature="25364:25390" ph="..." />
+            <marker date="1498940300327" expanded="false" signature="28733:28759" ph="..." />
+            <marker date="1498940300327" expanded="false" signature="31314:31340" ph="..." />
+            <marker date="1498940300327" expanded="false" signature="33906:33932" ph="..." />
+            <marker date="1498940300327" expanded="false" signature="36467:36493" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/DAO/StoryEntityRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="32" column="29" lean-forward="false" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/DAO/StoryEntityRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="563" column="46" lean-forward="false" selection-start-line="563" selection-start-column="46" selection-end-line="563" selection-end-column="46" />
+          <folding>
+            <element signature="e#19169#19183#0" expanded="true" />
+            <element signature="e#19935#19949#0" expanded="true" />
+            <element signature="e#22337#22354#0" expanded="true" />
+            <marker date="1498940004869" expanded="true" signature="23580:23617" ph="SELECT STORY... dual" />
+            <marker date="1498940004869" expanded="true" signature="23850:23976" ph="INSERT INTO STORY... " />
+            <marker date="1498940004869" expanded="true" signature="25406:25452" ph="SELECT LASTC... STORY" />
+            <marker date="1498940004869" expanded="true" signature="26310:26363" ph="INSERT INTO STORYTAG... " />
+            <marker date="1498940004869" expanded="true" signature="27114:27237" ph="SELECT * FRO... STORY" />
+            <marker date="1498940004869" expanded="true" signature="28530:28577" ph="SELECT CHAPT... STORY" />
+            <marker date="1498940004869" expanded="true" signature="29026:29073" ph="SELECT FIRST... STORY" />
           </folding>
         </state>
       </provider>

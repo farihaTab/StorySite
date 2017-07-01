@@ -327,15 +327,15 @@
     </div>
 </div>
 
-<c:forEach items="${storiesByTags}" var="storiesbytag">
+<c:forEach var="storiesbytag" items="${storiesByTags}" varStatus="status">
 
     <div class="container">
-        <h2>${storiesbytag.tag}</h2>
+        <h2>&#35${storiesbytag.tag}</h2>
         <h4>A tag you may like</h4>
 
         <span style="display:block; height: 20;"></span> <%--vertical space--%>
 
-        <div class="carousel slide row" data-ride="carousel" data-type="multi" data-interval="4000" id="myCarousel${stories.tag}">
+        <div class="carousel slide row" data-ride="carousel" data-type="multi" data-interval="4000" id="myCarousel${storiesbytag.tag}">
 
             <div class="carousel-inner">
                 <c:set var="idx" value="${0}"/>
@@ -401,12 +401,91 @@
                     <c:set var="idx" value="${idx+1}"/>
                 </c:forEach>
             </div>
-            <a class="left carousel-control" href="#myCarousel${stories.tag}" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
-            <a class="right carousel-control" href="#myCarousel${stories.tag}" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+            <a class="left carousel-control" href="#myCarousel${storiesbytag.tag}" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+            <a class="right carousel-control" href="#myCarousel${storiesbytag.tag}" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>${trendingWriter[status.index].writerid}</h2>
+        <h4>A trending profile you may like</h4>
+
+        <span style="display:block; height: 20;"></span> <%--vertical space--%>
+
+        <div class="carousel slide row" data-ride="carousel" data-type="multi" data-interval="4000" id="myCarousel${trendingWriter[status.index].writerid}">
+
+            <div class="carousel-inner">
+                <c:set var="idx" value="${0}"/>
+                <c:forEach items="${trendingWriter[status.index].storyEntities}" var="storyentity">
+                    <c:choose>
+                        <c:when test="${idx==0}">
+                            <div class="item active" >
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="row">
+                                        <div class="col-md-5 col-sm-6">
+                                            <a href="#">
+                                                <img src="<c:url value="/resource/images/storycover/${storyentity.storyid}.jpg"></c:url>" class="img-responsive">
+                                            </a>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6">
+                                            <h4>${storyentity.title}</h4>
+                                            <h5>by ${storyentity.writerid}</h5>
+                                            <h5>${storyentity.categoryname}</h5>
+                                            <h6> ${storyentity.readcount} reads ${storyentity.likecount} likes ${storyentity.chaptercount} part story</h6>
+                                            <c:choose>
+                                                <c:when test="${storyentity.iscompleted==false}">
+                                                    <p>Ongoing</p>
+                                                </c:when>
+                                                <c:otherwise>
+                                                    <p>Completed</p>
+                                                </c:otherwise>
+                                            </c:choose>
+                                            <p> ${storyentity.description}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </c:when>
+                        <c:otherwise>
+                            <div class="item " >
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="row">
+                                        <div class="col-md-5 col-sm-6">
+                                            <a href="#">
+                                                <img src="<c:url value="/resource/images/storycover/${storyentity.storyid}.jpg"></c:url>" class="img-responsive">
+                                            </a>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6">
+                                            <h4>${storyentity.title}</h4>
+                                            <h5>by ${storyentity.writerid}</h5>
+                                            <h5>${storyentity.categoryname}</h5>
+                                            <h6> ${storyentity.readcount} reads ${storyentity.likecount} likes ${storyentity.chaptercount} part story</h6>
+                                            <c:choose>
+                                                <c:when test="${storyentity.iscompleted==false}">
+                                                    <p>Ongoing</p>
+                                                </c:when>
+                                                <c:otherwise>
+                                                    <p>Completed</p>
+                                                </c:otherwise>
+                                            </c:choose>
+                                            <p> ${storyentity.description}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </c:otherwise>
+                    </c:choose>
+                    <c:set var="idx" value="${idx+1}"/>
+                </c:forEach>
+            </div>
+            <a class="left carousel-control" href="#myCarousel${trendingWriter[status.index].writerid}" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+            <a class="right carousel-control" href="#myCarousel${trendingWriter[status.index].writerid}" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
 
         </div>
     </div>
 </c:forEach>
+
 
 <%--
 <div class="container">

@@ -528,7 +528,8 @@ public class StoryEntityRepositoryImpl implements StoryEntityRepository {
                 }
                 storyDetails.add(new StoryDetails(story,userprofile,tags));
             }
-            storiesByTags.add(new StoriesByTag(tag,storyDetails));
+            if(storyDetails.size()>0)
+                storiesByTags.add(new StoriesByTag(tag,storyDetails));
 
         }
 
@@ -569,7 +570,8 @@ public class StoryEntityRepositoryImpl implements StoryEntityRepository {
             query.setMaxResults(1);
             UserprofileEntity userprofile = (UserprofileEntity) query.uniqueResult();
 
-            storiesByWriters.add(new StoriesByWriter(writer,userprofile,storyEntities));
+            if(storyEntities.size()>0)
+                storiesByWriters.add(new StoriesByWriter(writer,userprofile,storyEntities));
 
         }
 
