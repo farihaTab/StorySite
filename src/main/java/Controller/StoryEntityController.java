@@ -118,7 +118,12 @@ public class StoryEntityController {
 
 
     @RequestMapping(value = "/home", method = RequestMethod.GET)
-    public String homePage(HttpServletRequest request) {
+    public String homePage(HttpServletRequest request,Model model) {
+        ArrayList<StoryDetails> recommendedStories = storyEntityService.getRecommendedStories(username);
+        model.addAttribute("recommendedStories",recommendedStories);
+        ArrayList<StoryDetails> continueReading = storyEntityService.getContinueReadingStories(username);
+        model.addAttribute("continueReading",continueReading);
+
         return "home";
     }
 

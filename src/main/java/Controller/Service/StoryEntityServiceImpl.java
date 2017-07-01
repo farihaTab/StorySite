@@ -102,6 +102,15 @@ public class StoryEntityServiceImpl implements StoryEntityService {
         return storyEntityRepository.getChapterTitlesByStoryId(storyid);
     }
 
+    @Override
+    public ArrayList<StoryDetails> getRecommendedStories(String username){
+        return storyEntityRepository.getRecommendedStories(username);
+    }
+    @Override
+    public ArrayList<StoryDetails> getContinueReadingStories(String username){
+        return storyEntityRepository.getContinueReadingStories(username);
+    }
+
 
 
 

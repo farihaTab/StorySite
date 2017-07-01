@@ -26,7 +26,9 @@ public interface StoryEntityRepository {
     void insertFollowEntity(FollowtableEntity follow);
     void deleteFollowEntity(FollowtableEntity follow);
     void uploadFile(FilesUploadEntity uploadFile);
+    ArrayList<StoryDetails> getRecommendedStories(String username);
 
+    ArrayList<StoryDetails> getContinueReadingStories(String username);
 
 
     //******************tamanna***********************//
@@ -41,6 +43,7 @@ public interface StoryEntityRepository {
     int getLastChapter(int storyid);
     boolean insertTag(StoryEntity newStory);
     List<StoryEntity> getSearchResult(String tagname);
+
 
 
 }

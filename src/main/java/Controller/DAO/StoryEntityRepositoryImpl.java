@@ -344,6 +344,120 @@ public class StoryEntityRepositoryImpl implements StoryEntityRepository {
         session.close();
         return list;
     }
+    @Override
+    public ArrayList<StoryDetails> getRecommendedStories(String username){
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+        System.out.println("username : "+username);
+
+        String hql = "select rs.interestedin from RecommendedstoryEntity rs where rs.interested = :username";
+        Query query = session.createQuery(hql);
+        query.setParameter("username",username);
+        query.setMaxResults(10);
+        ArrayList<StoryDetails> recommendedStories = new ArrayList<StoryDetails>();
+        List<Object[]> list = query.list();
+        for (Object[] object:list) {
+            Integer storyid = (Integer)object[0];
+            hql = "from Model.StoryEntity where storyid = :storyid";
+            query = session.createQuery(hql);
+            query.setParameter("storyid",storyid);
+            StoryEntity story =(StoryEntity) query.uniqueResult();
+
+            System.out.println("story: "+story.getTitle());
+            hql = "from Model.UserprofileEntity where  writer = :writerid";
+            query = session.createQuery(hql);
+            query.setParameter("writerid",story.getWriterid());
+            query.setFirstResult(0);
+            query.setMaxResults(1);
+            UserprofileEntity userprofile = (UserprofileEntity) query.uniqueResult();
+            System.out.println("writer: "+userprofile.getWriter());
+
+            String sql = "select st.tagname from Model.StorytagEntity st where st.taggedstory = :storyid";
+            query = session.createQuery(sql);
+            query.setParameter("storyid",story.getStoryid());
+            query.setFirstResult(0);
+            query.setMaxResults(1);
+            List<Object[]> temptags = query.list();
+            ArrayList<String> tags  = new ArrayList<String>();
+            for (Object[] obj:temptags) {
+                tags.add((String)obj[0]);
+                System.out.println((String)obj[0]);
+            }
+            //Hibernate.initialize(story.getStorytagsByStoryid());
+
+            recommendedStories.add(new StoryDetails(story,userprofile,tags));
+        }
+
+        session.flush();
+        session.getTransaction().commit();
+        session.close();
+        return recommendedStories;
+
+    }
+    @Override
+    public ArrayList<StoryDetails> getContinueReadingStories(String username){
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+
+        String hql = "SELECT  r.READSTORY FROM READING r " +
+                "WHERE r.READBY = :username " +
+                "AND r.READINGPACE <> (SELECT s.LASTCHAPTER FROM STORY s WHERE s.STORYID = r.READSTORY) " +
+                "ORDER BY r.LASTREADAT DESC ";
+        Query query = session.createQuery(hql);
+        query.setParameter("username",username);
+        query.setMaxResults(10);
+        List<Object[]> list = query.list();
+        ArrayList<StoryDetails> continueReading = new ArrayList<StoryDetails>();
+        for (Object[] object:list) {
+            Integer storyid = (Integer)object[0];
+            hql = "from Model.StoryEntity where storyid = :storyid";
+            query = session.createQuery(hql);
+            query.setParameter("storyid",storyid);
+            StoryEntity story =(StoryEntity) query.uniqueResult();
+
+            System.out.println("story: "+story.getTitle());
+            hql = "from Model.UserprofileEntity where  writer = :writerid";
+            query = session.createQuery(hql);
+            query.setParameter("writerid",story.getWriterid());
+            query.setFirstResult(0);
+            query.setMaxResults(1);
+            UserprofileEntity userprofile = (UserprofileEntity) query.uniqueResult();
+            System.out.println("writer: "+userprofile.getWriter());
+
+            hql = "select st.tagname from Model.StorytagEntity st where st.taggedstory = :storyid";
+            query = session.createQuery(hql);
+            query.setParameter("storyid",story.getStoryid());
+            List<Object[]> temptags = query.list();
+            ArrayList<String> tags  = new ArrayList<String>();
+            for (Object[] obj:temptags) {
+                tags.add((String)obj[0]);
+                System.out.println((String)obj[0]);
+            }
+
+            continueReading.add(new StoryDetails(story,userprofile,tags));
+        }
+
+        session.flush();
+        session.getTransaction().commit();
+        session.close();
+        return continueReading;
+        /*try{
+            String query = "SELECT  READSTORY FROM READING WHERE READBY = ? AND READINGPACE <> " +
+                    "(SELECT LASTCHAPTER FROM STORY WHERE STORYID = READING.READSTORY)" ;
+            PreparedStatement stmt = conn.prepareStatement(query);
+            stmt.setString(1, username);
+            stmt.setMaxRows(10);
+            ResultSet rs = stmt.executeQuery();
+            ArrayList<StoryDetails> storyDetailss = new ArrayList<StoryDetails>();
+            if (rs.next()) {
+                int storyid = rs.getInt("READSTORY");
+                String
+
+            }
+        }
+        catch (Exception e){e.printStackTrace();}*/
+
+    }
 
 
     //*******************************Tamanna****************************//

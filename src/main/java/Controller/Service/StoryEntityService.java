@@ -26,6 +26,8 @@ public interface StoryEntityService {
     Boolean insertReadingEntity(ReadingEntity readingEntity);
     boolean writerFollowedByUser(String username, String writerid);
     void uploadFile(FilesUploadEntity uploadFile);
+    ArrayList<StoryDetails> getRecommendedStories(String username);
+    ArrayList<StoryDetails> getContinueReadingStories(String username);
 
 
 //***************************tamanna*****************************//
@@ -37,6 +39,7 @@ public interface StoryEntityService {
     int getLastChapter(int storyid);
     boolean insertTag(StoryEntity newStory);
     List<StoryEntity> getSearchResult(String tagname);
+
 
 
 }

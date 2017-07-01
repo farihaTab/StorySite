@@ -37,6 +37,7 @@ public class StoryEntity {
     private Collection<ReadingEntity> readingsByStoryid;
     private Collection<ReadinglistdetailsEntity> readinglistdetailssByStoryid;
     private AccountuserEntity accountuserByWriterid;
+    private UserprofileEntity userprofileByWriterid;
     private LanguagetableEntity languagetableByLang;
     private CategoryEntity categoryByCategoryname;
     private CopyrighttypeEntity copyrighttypeByStorycopyright;
@@ -389,6 +390,12 @@ public class StoryEntity {
     public AccountuserEntity getAccountuserByWriterid() {
         return accountuserByWriterid;
     }
+
+    /*@ManyToOne
+    @JoinColumn(name = "WRITERID", referencedColumnName = "WRITER", insertable = false, updatable = false)
+    public UserprofileEntity getUserProfileByWriterid() {
+        return userprofileByWriterid;
+    }*/
 
     public void setAccountuserByWriterid(AccountuserEntity accountuserByWriterid) {
         this.accountuserByWriterid = accountuserByWriterid;
