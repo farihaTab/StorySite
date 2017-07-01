@@ -111,7 +111,14 @@ public class StoryEntityServiceImpl implements StoryEntityService {
         return storyEntityRepository.getContinueReadingStories(username);
     }
 
-
+    @Override
+    public ArrayList<StoryDetails> getTrendingStories(){
+        return storyEntityRepository.getTrendingStories();
+    }
+    @Override
+    public ArrayList<StoriesByTag> getStoriesByUserLikedTags(String username){
+        return storyEntityRepository.getStoriesByUserLikedTags(username);
+    }
 
 
 

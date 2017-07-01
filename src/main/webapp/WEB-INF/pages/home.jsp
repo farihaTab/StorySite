@@ -113,11 +113,11 @@
 
     <span style="display:block; height: 20;"></span> <%--vertical space--%>
 
-    <div class="carousel slide row" data-ride="carousel" data-type="multi" data-interval="4000" id="myCarousel">
+    <div class="carousel slide row" data-ride="carousel" data-type="multi" data-interval="4000" id="myCarousel0">
 
         <div class="carousel-inner">
             <c:set var="idx" value="${0}"/>
-            <c:forEach items="${recommendedStories}" var="story">
+            <c:forEach items="${continueReading}" var="story">
                 <c:choose>
                     <c:when test="${idx==0}">
                         <div class="item active" >
@@ -125,35 +125,51 @@
                                 <div class="row">
                                     <div class="col-md-5 col-sm-6">
                                         <a href="#">
-                                            <img src="<c:url value="/resource/images/storycover/${story.storyid}.jpg"></c:url>" class="img-responsive">
+                                            <img src="<c:url value="/resource/images/storycover/${story.storyEntity.storyid}.jpg"></c:url>" class="img-responsive">
                                         </a>
                                     </div>
                                     <div class="col-md-6 col-sm-6">
-                                        <h4>${story.title}Story name</h4>
-                                        <h5>by someone with link to his profile</h5>
-                                        <h5>${story.categoryname}</h5>
-                                        <h6> ${story.readcount} reads ${story.likecount} likes ${story.chaptercount} part story</h6>
-                                        <p> ${story.description}</p>
+                                        <h4>${story.storyEntity.title}</h4>
+                                        <h5>by ${story.storyEntity.writerid}</h5>
+                                        <h5>${story.storyEntity.categoryname}</h5>
+                                        <h6> ${story.storyEntity.readcount} reads ${story.storyEntity.likecount} likes ${story.storyEntity.chaptercount} part story</h6>
+                                        <c:choose>
+                                            <c:when test="${story.storyEntity.iscompleted==false}">
+                                                <p>Ongoing</p>
+                                            </c:when>
+                                            <c:otherwise>
+                                                <p>Completed</p>
+                                            </c:otherwise>
+                                        </c:choose>
+                                        <p> ${story.storyEntity.description}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </c:when>
                     <c:otherwise>
-                        <div class="item " >
+                        <div class="item" >
                             <div class="col-md-4 col-sm-6 col-xs-12">
                                 <div class="row">
                                     <div class="col-md-5 col-sm-6">
                                         <a href="#">
-                                            <img src="<c:url value="/resource/images/storycover/${story.storyid}.jpg"></c:url>" class="img-responsive">
+                                            <img src="<c:url value="/resource/images/storycover/${story.storyEntity.storyid}.jpg"></c:url>" class="img-responsive">
                                         </a>
                                     </div>
                                     <div class="col-md-6 col-sm-6">
-                                        <h4>${story.title}Story name</h4>
-                                        <h5>by someone with link to his profile</h5>
-                                        <h5>${story.categoryname}</h5>
-                                        <h6> ${story.readcount} reads ${story.likecount} likes ${story.chaptercount} part story</h6>
-                                        <p> ${story.description}</p>
+                                        <h4>${story.storyEntity.title} </h4>
+                                        <h5>by ${story.storyEntity.writerid}</h5>
+                                        <h5>${story.storyEntity.categoryname}</h5>
+                                        <h6> ${story.storyEntity.readcount} reads ${story.storyEntity.likecount} likes ${story.storyEntity.chaptercount} part story</h6>
+                                        <c:choose>
+                                            <c:when test="${story.storyEntity.iscompleted==false}">
+                                                <p>Ongoing</p>
+                                            </c:when>
+                                            <c:otherwise>
+                                                <p>Completed</p>
+                                            </c:otherwise>
+                                        </c:choose>
+                                        <p> ${story.storyEntity.description}</p>
                                     </div>
                                 </div>
                             </div>
@@ -164,17 +180,17 @@
             </c:forEach>
         </div>
 
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+        <a class="left carousel-control" href="#myCarousel0" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+        <a class="right carousel-control" href="#myCarousel0" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
 
     </div>
 </div>
 
-<div class="container">
+<%--<div class="container">
     <h2>Trending</h2>
     <h4>Stories that are gaining popularity</h4>
 
-    <span style="display:block; height: 20;"></span> <%--vertical space--%>
+    <span style="display:block; height: 20;"></span> &lt;%&ndash;vertical space&ndash;%&gt;
 
     <div class="carousel slide row" data-ride="carousel" data-type="multi" data-interval="4000" id="myCarousel">
 
@@ -231,7 +247,7 @@
         <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
 
     </div>
-</div>
+</div>--%>
 
 <div class="container">
     <h2>Continue Reading</h2>
@@ -239,11 +255,11 @@
 
     <span style="display:block; height: 20;"></span> <%--vertical space--%>
 
-    <div class="carousel slide row" data-ride="carousel" data-type="multi" data-interval="4000" id="myCarousel">
+    <div class="carousel slide row" data-ride="carousel" data-type="multi" data-interval="4000" id="myCarousel1">
 
         <div class="carousel-inner">
             <c:set var="idx" value="${0}"/>
-            <c:forEach items="${continueReading}" var="story">
+            <c:forEach items="${recommendedStories}" var="story">
                 <c:choose>
                     <c:when test="${idx==0}">
                         <div class="item active" >
@@ -251,15 +267,23 @@
                                 <div class="row">
                                     <div class="col-md-5 col-sm-6">
                                         <a href="#">
-                                            <img src="<c:url value="/resource/images/storycover/${story.storyid}.jpg"></c:url>" class="img-responsive">
+                                            <img src="<c:url value="/resource/images/storycover/${story.storyEntity.storyid}.jpg"></c:url>" class="img-responsive">
                                         </a>
                                     </div>
                                     <div class="col-md-6 col-sm-6">
-                                        <h4>${story.title}Story name</h4>
-                                        <h5>by someone with link to his profile</h5>
-                                        <h5>${story.categoryname}</h5>
-                                        <h6> ${story.readcount} reads ${story.likecount} likes ${story.chaptercount} part story</h6>
-                                        <p> ${story.description}</p>
+                                        <h4>${story.storyEntity.title}</h4>
+                                        <h5>by ${story.storyEntity.writerid}</h5>
+                                        <h5>${story.storyEntity.categoryname}</h5>
+                                        <h6> ${story.storyEntity.readcount} reads ${story.storyEntity.likecount} likes ${story.storyEntity.chaptercount} part story</h6>
+                                        <c:choose>
+                                            <c:when test="${story.storyEntity.iscompleted==false}">
+                                                <p>Ongoing</p>
+                                            </c:when>
+                                            <c:otherwise>
+                                                <p>Completed</p>
+                                            </c:otherwise>
+                                        </c:choose>
+                                        <p> ${story.storyEntity.description}</p>
                                     </div>
                                 </div>
                             </div>
@@ -271,15 +295,23 @@
                                 <div class="row">
                                     <div class="col-md-5 col-sm-6">
                                         <a href="#">
-                                            <img src="<c:url value="/resource/images/storycover/${story.storyid}.jpg"></c:url>" class="img-responsive">
+                                            <img src="<c:url value="/resource/images/storycover/${story.storyEntity.storyid}.jpg"></c:url>" class="img-responsive">
                                         </a>
                                     </div>
                                     <div class="col-md-6 col-sm-6">
-                                        <h4>${story.title}Story name</h4>
-                                        <h5>by someone with link to his profile</h5>
-                                        <h5>${story.categoryname}</h5>
-                                        <h6> ${story.readcount} reads ${story.likecount} likes ${story.chaptercount} part story</h6>
-                                        <p> ${story.description}</p>
+                                        <h4>${story.storyEntity.title}</h4>
+                                        <h5>by ${story.storyEntity.writerid}</h5>
+                                        <h5>${story.storyEntity.categoryname}</h5>
+                                        <h6> ${story.storyEntity.readcount} reads ${story.storyEntity.likecount} likes ${story.storyEntity.chaptercount} part story</h6>
+                                        <c:choose>
+                                            <c:when test="${story.storyEntity.iscompleted==false}">
+                                                <p>Ongoing</p>
+                                            </c:when>
+                                            <c:otherwise>
+                                                <p>Completed</p>
+                                            </c:otherwise>
+                                        </c:choose>
+                                        <p> ${story.storyEntity.description}</p>
                                     </div>
                                 </div>
                             </div>
@@ -289,18 +321,99 @@
                 <c:set var="idx" value="${idx+1}"/>
             </c:forEach>
         </div>
-
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+        <a class="left carousel-control" href="#myCarousel1" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+        <a class="right carousel-control" href="#myCarousel1" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
 
     </div>
 </div>
 
+<c:forEach items="${storiesByTags}" var="storiesbytag">
+
+    <div class="container">
+        <h2>${storiesbytag.tag}</h2>
+        <h4>A tag you may like</h4>
+
+        <span style="display:block; height: 20;"></span> <%--vertical space--%>
+
+        <div class="carousel slide row" data-ride="carousel" data-type="multi" data-interval="4000" id="myCarousel${stories.tag}">
+
+            <div class="carousel-inner">
+                <c:set var="idx" value="${0}"/>
+                <c:forEach items="${storiesbytag.stories}" var="story">
+                    <c:choose>
+                        <c:when test="${idx==0}">
+                            <div class="item active" >
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="row">
+                                        <div class="col-md-5 col-sm-6">
+                                            <a href="#">
+                                                <img src="<c:url value="/resource/images/storycover/${story.storyEntity.storyid}.jpg"></c:url>" class="img-responsive">
+                                            </a>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6">
+                                            <h4>${story.storyEntity.title}</h4>
+                                            <h5>by ${story.storyEntity.writerid}</h5>
+                                            <h5>${story.storyEntity.categoryname}</h5>
+                                            <h6> ${story.storyEntity.readcount} reads ${story.storyEntity.likecount} likes ${story.storyEntity.chaptercount} part story</h6>
+                                            <c:choose>
+                                                <c:when test="${story.storyEntity.iscompleted==false}">
+                                                    <p>Ongoing</p>
+                                                </c:when>
+                                                <c:otherwise>
+                                                    <p>Completed</p>
+                                                </c:otherwise>
+                                            </c:choose>
+                                            <p> ${story.storyEntity.description}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </c:when>
+                        <c:otherwise>
+                            <div class="item " >
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="row">
+                                        <div class="col-md-5 col-sm-6">
+                                            <a href="#">
+                                                <img src="<c:url value="/resource/images/storycover/${story.storyEntity.storyid}.jpg"></c:url>" class="img-responsive">
+                                            </a>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6">
+                                            <h4>${story.storyEntity.title}</h4>
+                                            <h5>by ${story.storyEntity.writerid}</h5>
+                                            <h5>${story.storyEntity.categoryname}</h5>
+                                            <h6> ${story.storyEntity.readcount} reads ${story.storyEntity.likecount} likes ${story.storyEntity.chaptercount} part story</h6>
+                                            <c:choose>
+                                                <c:when test="${story.storyEntity.iscompleted==false}">
+                                                    <p>Ongoing</p>
+                                                </c:when>
+                                                <c:otherwise>
+                                                    <p>Completed</p>
+                                                </c:otherwise>
+                                            </c:choose>
+                                            <p> ${story.storyEntity.description}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </c:otherwise>
+                    </c:choose>
+                    <c:set var="idx" value="${idx+1}"/>
+                </c:forEach>
+            </div>
+            <a class="left carousel-control" href="#myCarousel${stories.tag}" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+            <a class="right carousel-control" href="#myCarousel${stories.tag}" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+
+        </div>
+    </div>
+</c:forEach>
+
+<%--
 <div class="container">
     <h2>Recommended profiles</h2>
     <h4>Writers we think you'll love</h4>
-<%--todo: profile design--%>
-    <span style="display:block; height: 20;"></span> <%--vertical space--%>
+&lt;%&ndash;todo: profile design&ndash;%&gt;
+    <span style="display:block; height: 20;"></span> &lt;%&ndash;vertical space&ndash;%&gt;
 
     <div class="carousel slide row" data-ride="carousel" data-type="multi" data-interval="4000" id="myCarousel">
 
@@ -358,12 +471,14 @@
 
     </div>
 </div>
+--%>
 
+<%--
 <div class="container">
     <h2>#dkjlss</h2>
     <h4>A trending tag</h4>
 
-    <span style="display:block; height: 20;"></span> <%--vertical space--%>
+    <span style="display:block; height: 20;"></span> &lt;%&ndash;vertical space&ndash;%&gt;
 
     <div class="carousel slide row" data-ride="carousel" data-type="multi" data-interval="4000" id="myCarousel">
 
@@ -412,14 +527,16 @@
 
     </div>
 </div>
+--%>
 
 
 
+<%--
 <div class="container">
     <h2>Stories by Leo tolostoy</h2>
     <h4>A trending profile</h4>
 
-    <span style="display:block; height: 20;"></span> <%--vertical space--%>
+    <span style="display:block; height: 20;"></span> &lt;%&ndash;vertical space&ndash;%&gt;
 
     <div class="carousel slide row" data-ride="carousel" data-type="multi" data-interval="4000" id="myCarousel">
 
@@ -468,13 +585,15 @@
 
     </div>
 </div>
+--%>
 
 
+<%--
 <div class="container">
     <h2>Stories by Radio active</h2>
     <h4>A profile we think you'll love</h4>
 
-    <span style="display:block; height: 20;"></span> <%--vertical space--%>
+    <span style="display:block; height: 20;"></span> &lt;%&ndash;vertical space&ndash;%&gt;
 
     <div class="carousel slide row" data-ride="carousel" data-type="multi" data-interval="4000" id="myCarousel">
 
@@ -523,13 +642,15 @@
 
     </div>
 </div>
+--%>
 
+<%--
 
 <div class="container">
     <h2>#tag</h2>
     <h4>A tag you may like</h4>
 
-    <span style="display:block; height: 20;"></span> <%--vertical space--%>
+    <span style="display:block; height: 20;"></span> &lt;%&ndash;vertical space&ndash;%&gt;
 
     <div class="carousel slide row" data-ride="carousel" data-type="multi" data-interval="4000" id="myCarousel">
 
@@ -578,6 +699,7 @@
 
     </div>
 </div>
+--%>
 
 
 </body>

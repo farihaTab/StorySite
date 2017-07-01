@@ -183,7 +183,7 @@ public class AccountuserEntity {
         this.chaptercommentssByUsername = chaptercommentssByUsername;
     }
 
-    @OneToMany(mappedBy = "accountuserByFollower")
+    /*@OneToMany(mappedBy = "accountuserByFollower")
     public Collection<FollowtableEntity> getFollowtablesByUsername() {
         return followtablesByUsername;
     }
@@ -192,14 +192,16 @@ public class AccountuserEntity {
         this.followtablesByUsername = followtablesByUsername;
     }
 
+
     @OneToMany(mappedBy = "accountuserByFollowed")
     public Collection<FollowtableEntity> getFollowtablesByUsername_0() {
         return followtablesByUsername_0;
     }
 
+
     public void setFollowtablesByUsername_0(Collection<FollowtableEntity> followtablesByUsername_0) {
         this.followtablesByUsername_0 = followtablesByUsername_0;
-    }
+    }*/
 
     @OneToMany(mappedBy = "accountuserByInterested")
     public Collection<InterestEntity> getInterestsByUsername() {
@@ -273,10 +275,11 @@ public class AccountuserEntity {
         this.storycommentssByUsername = storycommentssByUsername;
     }
 
-    @OneToOne(mappedBy = "accountuserByWriter")
+    /*@OneToOne(mappedBy = "accountuserByWriter")
     public UserprofileEntity getUserprofileByUsername() {
         return userprofileByUsername;
     }
+    */
 
     public void setUserprofileByUsername(UserprofileEntity userprofileByUsername) {
         this.userprofileByUsername = userprofileByUsername;

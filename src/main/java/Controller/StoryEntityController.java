@@ -123,6 +123,11 @@ public class StoryEntityController {
         model.addAttribute("recommendedStories",recommendedStories);
         ArrayList<StoryDetails> continueReading = storyEntityService.getContinueReadingStories(username);
         model.addAttribute("continueReading",continueReading);
+        //ArrayList<StoryDetails> trendingStories = storyEntityService.getTrendingStories();
+        //model.addAttribute("trendingStories",trendingStories);
+        ArrayList<StoriesByTag> storiesByTags = storyEntityService.getStoriesByUserLikedTags(username);
+        model.addAttribute("storiesByTags",storiesByTags);
+        System.out.println("size "+storiesByTags.size());
 
         return "home";
     }

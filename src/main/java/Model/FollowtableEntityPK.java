@@ -11,6 +11,11 @@ public class FollowtableEntityPK implements Serializable {
     private String follower;
     private String followed;
 
+    public FollowtableEntityPK(String follower, String followed) {
+        this.follower = follower;
+        this.followed = followed;
+    }
+
     @Column(name = "FOLLOWER", nullable = false, length = 20)
     @Id
     public String getFollower() {

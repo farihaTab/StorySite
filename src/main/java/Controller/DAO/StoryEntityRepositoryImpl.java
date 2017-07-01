@@ -348,16 +348,17 @@ public class StoryEntityRepositoryImpl implements StoryEntityRepository {
     public ArrayList<StoryDetails> getRecommendedStories(String username){
         Session session = sessionFactory.openSession();
         session.beginTransaction();
-        System.out.println("username : "+username);
+        System.out.println("recommend story for : "+username);
 
-        String hql = "select rs.interestedin from RecommendedstoryEntity rs where rs.interested = :username";
+        String hql = "select rs.interestedin from RecommendedstoryEntity rs where rs.interested = :username order by rs.interestrating desc ";
         Query query = session.createQuery(hql);
         query.setParameter("username",username);
         query.setMaxResults(10);
         ArrayList<StoryDetails> recommendedStories = new ArrayList<StoryDetails>();
-        List<Object[]> list = query.list();
-        for (Object[] object:list) {
-            Integer storyid = (Integer)object[0];
+        List<Long> list = query.list();
+        System.out.println("size : "+list.size());
+        for (Long object:list) {
+            Long storyid = (Long)object;
             hql = "from Model.StoryEntity where storyid = :storyid";
             query = session.createQuery(hql);
             query.setParameter("storyid",storyid);
@@ -377,11 +378,11 @@ public class StoryEntityRepositoryImpl implements StoryEntityRepository {
             query.setParameter("storyid",story.getStoryid());
             query.setFirstResult(0);
             query.setMaxResults(1);
-            List<Object[]> temptags = query.list();
+            List<String> temptags = query.list();
             ArrayList<String> tags  = new ArrayList<String>();
-            for (Object[] obj:temptags) {
-                tags.add((String)obj[0]);
-                System.out.println((String)obj[0]);
+            for (String obj:temptags) {
+                tags.add(obj);
+                System.out.println(obj);
             }
             //Hibernate.initialize(story.getStorytagsByStoryid());
 
@@ -399,17 +400,19 @@ public class StoryEntityRepositoryImpl implements StoryEntityRepository {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
 
-        String hql = "SELECT  r.READSTORY FROM READING r " +
-                "WHERE r.READBY = :username " +
-                "AND r.READINGPACE <> (SELECT s.LASTCHAPTER FROM STORY s WHERE s.STORYID = r.READSTORY) " +
-                "ORDER BY r.LASTREADAT DESC ";
+        System.out.println("continue reading for "+username);
+
+        String hql = "SELECT  r.readstory FROM Model.ReadingEntity r " +
+                "WHERE r.readby = :username " +
+                "AND r.readingpace <> (SELECT s.lastchapter FROM Model.StoryEntity s WHERE s.storyid = r.readstory) " +
+                "ORDER BY r.lastreadat DESC ";
         Query query = session.createQuery(hql);
         query.setParameter("username",username);
         query.setMaxResults(10);
-        List<Object[]> list = query.list();
+        List<Long> list = query.list();
         ArrayList<StoryDetails> continueReading = new ArrayList<StoryDetails>();
-        for (Object[] object:list) {
-            Integer storyid = (Integer)object[0];
+        for (Long object:list) {
+            Long storyid = object;
             hql = "from Model.StoryEntity where storyid = :storyid";
             query = session.createQuery(hql);
             query.setParameter("storyid",storyid);
@@ -427,11 +430,11 @@ public class StoryEntityRepositoryImpl implements StoryEntityRepository {
             hql = "select st.tagname from Model.StorytagEntity st where st.taggedstory = :storyid";
             query = session.createQuery(hql);
             query.setParameter("storyid",story.getStoryid());
-            List<Object[]> temptags = query.list();
+            List<String> temptags = query.list();
             ArrayList<String> tags  = new ArrayList<String>();
-            for (Object[] obj:temptags) {
-                tags.add((String)obj[0]);
-                System.out.println((String)obj[0]);
+            for (String obj:temptags) {
+                tags.add(obj);
+                System.out.println(obj);
             }
 
             continueReading.add(new StoryDetails(story,userprofile,tags));
@@ -457,6 +460,82 @@ public class StoryEntityRepositoryImpl implements StoryEntityRepository {
         }
         catch (Exception e){e.printStackTrace();}*/
 
+    }
+
+
+    @Override
+    public ArrayList<StoryDetails> getTrendingStories(){
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+        //todo: write code for finding trending stories
+        session.flush();
+        session.getTransaction().commit();
+        session.close();
+        return null;
+    }
+
+    @Override
+    public ArrayList<StoriesByTag> getStoriesByUserLikedTags(String username){
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+        System.out.println("stories by tags");
+
+        String hql = "select rt.interestedin from RecommendedtagEntity rt WHERE rt.interested = :username";
+        Query query = session.createQuery(hql);
+        query.setParameter("username",username);
+        query.setMaxResults(5);
+        List<String> tagsList = query.list();
+
+        ArrayList<StoriesByTag> storiesByTags = new ArrayList<StoriesByTag>();
+        for(String tag: tagsList){
+            System.out.println("tagname: "+tag);
+            hql = "select st.taggedstory from Model.StorytagEntity st , Model.StoryEntity s " +
+                    "where st.taggedstory = s.storyid "+
+                    "and st.tagname = :tag "+
+                    "and st.taggedstory not in (select l.likedstory from Model.LikesEntity l where l.likedby = :username) "+
+                    "order by s.likecount desc ";
+            query = session.createQuery(hql);
+            query.setParameter("tag",tag);
+            query.setParameter("username",username);
+            query.setMaxResults(10);
+
+            List<Long> storyids = query.list();
+            ArrayList<StoryDetails> storyDetails=new ArrayList<StoryDetails>();
+            for(Long storyid : storyids){
+
+                hql = "from Model.StoryEntity where storyid = :storyid";
+                query = session.createQuery(hql);
+                query.setParameter("storyid",storyid);
+                StoryEntity story =(StoryEntity) query.uniqueResult();
+
+                System.out.println("story: "+story.getTitle());
+                hql = "from Model.UserprofileEntity where  writer = :writerid";
+                query = session.createQuery(hql);
+                query.setParameter("writerid",story.getWriterid());
+                query.setFirstResult(0);
+                query.setMaxResults(1);
+                UserprofileEntity userprofile = (UserprofileEntity) query.uniqueResult();
+                System.out.println("writer: "+userprofile.getWriter());
+
+                hql = "select st.tagname from Model.StorytagEntity st where st.taggedstory = :storyid";
+                query = session.createQuery(hql);
+                query.setParameter("storyid",story.getStoryid());
+                List<String> temptags = query.list();
+                ArrayList<String> tags  = new ArrayList<String>();
+                for (String obj:temptags) {
+                    tags.add(obj);
+                    System.out.println(obj);
+                }
+                storyDetails.add(new StoryDetails(story,userprofile,tags));
+            }
+            storiesByTags.add(new StoriesByTag(tag,storyDetails));
+
+        }
+
+        session.flush();
+        session.getTransaction().commit();
+        session.close();
+        return storiesByTags;
     }
 
 

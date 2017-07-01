@@ -29,6 +29,8 @@ public interface StoryEntityService {
     ArrayList<StoryDetails> getRecommendedStories(String username);
     ArrayList<StoryDetails> getContinueReadingStories(String username);
 
+    ArrayList<StoryDetails> getTrendingStories();
+    ArrayList<StoriesByTag> getStoriesByUserLikedTags(String username);
 
 //***************************tamanna*****************************//
 

@@ -27,9 +27,9 @@ public interface StoryEntityRepository {
     void deleteFollowEntity(FollowtableEntity follow);
     void uploadFile(FilesUploadEntity uploadFile);
     ArrayList<StoryDetails> getRecommendedStories(String username);
-
     ArrayList<StoryDetails> getContinueReadingStories(String username);
-
+    ArrayList<StoryDetails> getTrendingStories();
+    ArrayList<StoriesByTag> getStoriesByUserLikedTags(String username);
 
     //******************tamanna***********************//
 

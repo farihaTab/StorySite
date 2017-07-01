@@ -90,6 +90,9 @@
             <value>Model.ViewedEntity</value>
             <value>Model.Employee</value>
             <value>Model.FilesUploadEntity</value>
+            <value>Model.RecommendedcategoryEntity</value>
+            <value>Model.RecommendedstoryEntity</value>
+            <value>Model.RecommendedtagEntity</value>
 
         </list>
     </property>
