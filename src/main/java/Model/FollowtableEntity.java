@@ -1,9 +1,10 @@
 package Model;
 
 import javax.persistence.*;
+import java.sql.Time;
 
 /**
- * Created by DELL on 5/13/2017.
+ * Created by DELL on 7/1/2017.
  */
 @Entity
 @Table(name = "FOLLOWTABLE", schema = "SDPROJECT", catalog = "")
@@ -11,8 +12,7 @@ import javax.persistence.*;
 public class FollowtableEntity {
     private String follower;
     private String followed;
-    private AccountuserEntity accountuserByFollower;
-    private AccountuserEntity accountuserByFollowed;
+    private Time updatedat;
 
     @Id
     @Column(name = "FOLLOWER", nullable = false, length = 20)
@@ -34,6 +34,16 @@ public class FollowtableEntity {
         this.followed = followed;
     }
 
+    @Basic
+    @Column(name = "UPDATEDAT", nullable = true)
+    public Time getUpdatedat() {
+        return updatedat;
+    }
+
+    public void setUpdatedat(Time updatedat) {
+        this.updatedat = updatedat;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -43,6 +53,7 @@ public class FollowtableEntity {
 
         if (follower != null ? !follower.equals(that.follower) : that.follower != null) return false;
         if (followed != null ? !followed.equals(that.followed) : that.followed != null) return false;
+        if (updatedat != null ? !updatedat.equals(that.updatedat) : that.updatedat != null) return false;
 
         return true;
     }
@@ -51,26 +62,7 @@ public class FollowtableEntity {
     public int hashCode() {
         int result = follower != null ? follower.hashCode() : 0;
         result = 31 * result + (followed != null ? followed.hashCode() : 0);
+        result = 31 * result + (updatedat != null ? updatedat.hashCode() : 0);
         return result;
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "FOLLOWER", referencedColumnName = "USERNAME", nullable = false, insertable = false, updatable = false)
-    public AccountuserEntity getAccountuserByFollower() {
-        return accountuserByFollower;
-    }
-
-    public void setAccountuserByFollower(AccountuserEntity accountuserByFollower) {
-        this.accountuserByFollower = accountuserByFollower;
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "FOLLOWED", referencedColumnName = "USERNAME", nullable = false, insertable = false, updatable = false)
-    public AccountuserEntity getAccountuserByFollowed() {
-        return accountuserByFollowed;
-    }
-
-    public void setAccountuserByFollowed(AccountuserEntity accountuserByFollowed) {
-        this.accountuserByFollowed = accountuserByFollowed;
     }
 }

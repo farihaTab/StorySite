@@ -5,19 +5,11 @@ import javax.persistence.Id;
 import java.io.Serializable;
 
 /**
- * Created by DELL on 5/13/2017.
+ * Created by DELL on 7/1/2017.
  */
 public class FollowtableEntityPK implements Serializable {
     private String follower;
     private String followed;
-
-    public FollowtableEntityPK() {
-    }
-
-    public FollowtableEntityPK(String follower, String followed) {
-        this.follower = follower;
-        this.followed = followed;
-    }
 
     @Column(name = "FOLLOWER", nullable = false, length = 20)
     @Id
