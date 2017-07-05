@@ -126,7 +126,8 @@ BEGIN
 END ;
 /
 
-CREATE OR REPLACE PROCEDURE populateRecommendationForUser ( uname IN VARCHAR2) IS
+CREATE OR REPLACE FUNCTION populateRecommendationForUser ( uname IN VARCHAR2)
+RETURN NUMBER IS
   i NUMBER;
   BEGIN
     DELETE FROM RECOMMENDEDCATEGORY WHERE INTERESTED = uname ;
@@ -137,6 +138,7 @@ CREATE OR REPLACE PROCEDURE populateRecommendationForUser ( uname IN VARCHAR2) I
       findInterestedCategory(uname);
       findInterestedTag(uname);
       findInterestedStory(uname);
+    RETURN 0;
   END ;
 /
 

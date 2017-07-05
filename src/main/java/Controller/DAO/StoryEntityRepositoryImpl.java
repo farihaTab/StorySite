@@ -5,13 +5,11 @@ import Model.*;
 import org.hibernate.*;
 import org.hibernate.criterion.Property;
 import org.hibernate.criterion.Restrictions;
+import org.hibernate.jdbc.Work;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Time;
+import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -345,7 +343,7 @@ public class StoryEntityRepositoryImpl implements StoryEntityRepository {
         return list;
     }
     @Override
-    public ArrayList<StoryDetails> getRecommendedStories(String username){
+    public ArrayList<StoryDetails> getRecommendedStories(final String username){
         Session session = sessionFactory.openSession();
         session.beginTransaction();
         System.out.println("recommending story for : "+username);
@@ -359,10 +357,19 @@ public class StoryEntityRepositoryImpl implements StoryEntityRepository {
         System.out.println("size : "+list.size());
 
         if(list.size()< 4){
-            hql = "CALL populateRecommendationForUser(:username)";
-            query = session.createQuery(hql);
-            query.setParameter("username",username);
-            query.list();
+
+            CallableStatement call = null;
+            try {
+                call = session.connection().prepareCall("{ ? = call populateRecommendationForUser(?) }");
+                call.registerOutParameter( 1, Types.INTEGER ); // or whatever it is
+                call.setString(2, username);
+                call.execute();
+                int result = call.getInt(1);
+                System.out.println("** woriking "+result);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+
 
             hql = "select rs.interestedin from RecommendedstoryEntity rs where rs.interested = :username order by rs.interestrating desc ";
             query = session.createQuery(hql);
