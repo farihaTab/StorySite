@@ -124,6 +124,21 @@ public class StoryEntityServiceImpl implements StoryEntityService {
         return storyEntityRepository.getTrendingWritersStories(username);
     }
 
+    @Override
+    public ArrayList<StoryDetails> getStorySuggestionsFromAlikeUsers(String storyid, String categoryname,String username){
+        ArrayList<StoryDetails> s =  storyEntityRepository.getStorySuggestionsFromAlikeUsers(storyid,categoryname);
+        if(s == null || s.size()<3){
+            s = storyEntityRepository.getTopStoriesByCategoryForUser(username,categoryname);
+            for (StoryDetails ss: s
+                 ) {
+                if(ss.getStoryEntity().getStoryid() == Long.valueOf(storyid))
+                    s.remove(ss);
+
+            }
+        }
+        return s;
+    }
+
 
 //*******************************tamanna****************************************************//
     @Override

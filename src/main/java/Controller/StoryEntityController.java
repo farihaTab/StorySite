@@ -60,6 +60,8 @@ public class StoryEntityController {
         logger.info("reading "+readingEntity);
         boolean liked = storyEntityService.storyLikedByUser(username, storyid);
         model.addAttribute("liked",liked);
+        ArrayList<StoryDetails> storySuggestionsFromAlikeUsers = storyEntityService.getStorySuggestionsFromAlikeUsers(storyid,story.getCategoryname(),username);
+        model.addAttribute("userWhoLikesThisAlsoLikesThese",storySuggestionsFromAlikeUsers);
 
         ReadingEntity readingEntity1 = new ReadingEntity();
         model.addAttribute("formReading",readingEntity1);
@@ -98,6 +100,7 @@ public class StoryEntityController {
         model.addAttribute("liked",liked);
         boolean followed = storyEntityService.writerFollowedByUser(username,story.getWriterid());
         model.addAttribute("followed",followed);
+
 
         ChaptercommentsEntity chaptercommentsEntity = new ChaptercommentsEntity();
         model.addAttribute("formChapterComment",chaptercommentsEntity);

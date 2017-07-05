@@ -288,39 +288,19 @@
             <div class="well" id="recommendations">
                     <h2>You'll also Like</h2>
                     <div class="well">
-                        <div class="media">
-                            <div class="media-left">
-                                <img src="img_avatar1.png" alt="story cover" class="media-object" style="width:80px;height:120px;">
+                        <c:forEach items="${userWhoLikesThisAlsoLikesThese}" var="suggestion">
+                            <div class="media">
+                                <div class="media-left">
+                                    <img src="img_avatar1.png" alt="story cover" class="media-object" style="width:80px;height:120px;">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">${suggestion.storyEntity.title}</h4>
+                                    <h5> by @${suggestion.storyEntity.title}</h5>
+                                    <p>${suggestion.storyEntity.description}</p>
+                                </div>
                             </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Story name</h4>
-                                <h5> by @authorname</h5>
-                                <p>Story description partial</p>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="media">
-                            <div class="media-left">
-                                <img src="img_avatar1.png" alt="story cover" class="media-object" style="width:80px;height:120px;">
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Story name</h4>
-                                <h5> by @authorname</h5>
-                                <p>Story description partial</p>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="media">
-                            <div class="media-left">
-                                <img src="img_avatar1.png" alt="story cover" class="media-object" style="width:80px;height:120px;">
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Story name</h4>
-                                <h5> by @authorname</h5>
-                                <p>Story description partial</p>
-                            </div>
-                        </div>
-                        <hr>
+                            <hr>
+                        </c:forEach>
                     </div>
             </div>
         </div>

@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="dataSource" uuid="5b8eaee1-05d5-45f2-b33c-d8a96c61cdcc">
-      <synchronize>true</synchronize>
-      <imported>true</imported>
-      <remarks>$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml</remarks>
-      <jdbc-driver>oracle.jdbc.driver.OracleDriverleDriver</jdbc-driver>
-      <jdbc-url>jdbc:oracle:thin:@localhost:1521:ORCL:thin:@localhost:1521:ORCL</jdbc-url>
-    </data-source>
     <data-source source="LOCAL" name="sessionFactory/Hibernate" uuid="0429850a-5af9-422a-8fd2-b4c333a832a5">
       <driver-ref>oracle</driver-ref>
       <synchronize>true</synchronize>

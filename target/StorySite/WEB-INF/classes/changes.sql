@@ -57,3 +57,31 @@ update STORY
 WHERE STORY.STORYID = CHAPTER.BELONGSTO;
 
 
+SELECT l.LIKEDSTORY
+FROM LIKES l
+WHERE l.LIKEDBY IN (
+  SELECT L2.LIKEDBY
+  FROM LIKES l2
+  WHERE l2.LIKEDSTORY = '142'
+) AND (
+        l.LIKEDSTORY IN (
+          SELECT s.STORYID
+          FROM STORY s
+          WHERE s.CATEGORYNAME = 'thriller'
+        )
+        OR l.LIKEDSTORY IN (
+          SELECT st.TAGGEDSTORY
+          FROM STORYTAG st
+          WHERE st.TAGNAME IN (
+            SELECT st2.TAGNAME
+            FROM STORYTAG st2
+            WHERE st2.TAGGEDSTORY = '104')
+        )
+
+      )
+GROUP BY l.LIKEDSTORY
+ORDER BY count(l.LIKEDBY) DESC ;
+
+
+
+
