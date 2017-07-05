@@ -4,9 +4,9 @@
     <root id="1"/>
     <schema id="2" parent="1" name="SDPROJECT">
       <ObjectId>91</ObjectId>
-      <IntrospectionTimestamp>2017-07-02.00:30:43</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2017-07-05.20:43:06</IntrospectionTimestamp>
       <CreatedTimestamp>2017-04-28.11:33:37</CreatedTimestamp>
-      <ModifiedTimestamp>2017-07-02.00:01:28</ModifiedTimestamp>
+      <ModifiedTimestamp>2017-07-03.21:48:30</ModifiedTimestamp>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -261,9 +261,9 @@
       <ModifiedTimestamp>2017-05-13.18:31:13</ModifiedTimestamp>
     </table>
     <table id="67" parent="2" name="USERPROFILE">
-      <ObjectId>78073</ObjectId>
-      <CreatedTimestamp>2017-06-29.16:00:17</CreatedTimestamp>
-      <ModifiedTimestamp>2017-06-29.16:00:17</ModifiedTimestamp>
+      <ObjectId>78300</ObjectId>
+      <CreatedTimestamp>2017-07-02.01:04:54</CreatedTimestamp>
+      <ModifiedTimestamp>2017-07-02.01:04:54</ModifiedTimestamp>
     </table>
     <table id="68" parent="2" name="VIEWED">
       <ObjectId>76285</ObjectId>
@@ -298,7 +298,7 @@
       <ObjectId>78183</ObjectId>
       <RoutineKind>procedure</RoutineKind>
       <CreatedTimestamp>2017-06-29.23:48:06</CreatedTimestamp>
-      <ModifiedTimestamp>2017-06-30.14:08:55</ModifiedTimestamp>
+      <ModifiedTimestamp>2017-07-02.01:16:31</ModifiedTimestamp>
     </routine>
     <column id="74" parent="46" name="USERNAME">
       <Position>1</Position>
@@ -375,6 +375,7 @@
     </key>
     <trigger id="87" parent="46" name="USERPROFILE_UPDATE">
       <ObjectId>78196</ObjectId>
+      <Invalid>1</Invalid>
       <CreatedTimestamp>2017-06-30.14:12:17</CreatedTimestamp>
       <ModifiedTimestamp>2017-06-30.14:33:50</ModifiedTimestamp>
       <Events>I</Events>
@@ -1442,22 +1443,22 @@ TAGNAME</ColNames>
       <DataType>NUMBER(9)|0</DataType>
     </column>
     <index id="263" parent="67" name="PK_USERPROFILE">
-      <ObjectId>78074</ObjectId>
-      <CreatedTimestamp>2017-06-29.16:00:17</CreatedTimestamp>
-      <ModifiedTimestamp>2017-06-29.16:00:17</ModifiedTimestamp>
+      <ObjectId>78301</ObjectId>
+      <CreatedTimestamp>2017-07-02.01:04:54</CreatedTimestamp>
+      <ModifiedTimestamp>2017-07-02.01:04:54</ModifiedTimestamp>
       <TablespaceName>SDPROJECT_TABSPACE</TablespaceName>
       <ColNames>WRITER</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="264" parent="67" name="PK_USERPROFILE">
-      <ModifiedTimestamp>2017-06-29.16:00:17</ModifiedTimestamp>
+      <ModifiedTimestamp>2017-07-02.01:04:54</ModifiedTimestamp>
       <ColNames>WRITER</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <UnderlyingIndexName>PK_USERPROFILE</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <foreign-key id="265" parent="67" name="FK_USERPROFILE">
-      <ModifiedTimestamp>2017-06-29.16:00:17</ModifiedTimestamp>
+      <ModifiedTimestamp>2017-07-02.01:04:54</ModifiedTimestamp>
       <ColNames>WRITER</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefTableName>ACCOUNTUSER</RefTableName>
