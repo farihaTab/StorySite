@@ -104,7 +104,8 @@ public class StoryEntityServiceImpl implements StoryEntityService {
 
     @Override
     public ArrayList<StoryDetails> getRecommendedStories(String username){
-        return storyEntityRepository.getRecommendedStories(username);
+        ArrayList<StoryDetails> arrayList = storyEntityRepository.getRecommendedStories(username);
+        return arrayList;
     }
     @Override
     public ArrayList<StoryDetails> getContinueReadingStories(String username){
@@ -139,8 +140,26 @@ public class StoryEntityServiceImpl implements StoryEntityService {
         return s;
     }
 
+    @Override
+    public ArrayList<StoriesByWriter> getSuggestedProfileForUser(String username, ArrayList<StoriesByWriter> trendingWriter) {
+        ArrayList<StoriesByWriter> s = storyEntityRepository.getSuggestedProfileForUser(username);
+       /* for (StoriesByWriter ss: s
+             ) {
+            for ( StoriesByWriter sss: trendingWriter
+                 ) {
+                if(ss.getWriterid().equals(sss.getWriterid()))
+                    s.remove(ss);
+            }
+        }*/
+        return s;
+    }
 
-//*******************************tamanna****************************************************//
+    @Override
+    public ArrayList<StoryDetails> getTopStories() {
+        return storyEntityRepository.getTopStories();
+    }
+
+    //*******************************tamanna****************************************************//
     @Override
     public int insertStory(StoryEntity story) {
         return storyEntityRepository.insertStory(story);

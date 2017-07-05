@@ -126,6 +126,20 @@ BEGIN
 END ;
 /
 
+CREATE OR REPLACE PROCEDURE populateRecommendationForUser ( uname IN VARCHAR2) IS
+  i NUMBER;
+  BEGIN
+    DELETE FROM RECOMMENDEDCATEGORY WHERE INTERESTED = uname ;
+    DELETE FROM RECOMMENDEDTAG WHERE INTERESTED = uname  ;
+    DELETE FROM RECOMMENDEDSTORY WHERE INTERESTED = uname ;
+
+      DBMS_OUTPUT.PUT_LINE('username '||uname) ;
+      findInterestedCategory(uname);
+      findInterestedTag(uname);
+      findInterestedStory(uname);
+  END ;
+/
+
 CREATE OR REPLACE PROCEDURE populateTrendingWriter IS
   prev DATE;
   BEGIN

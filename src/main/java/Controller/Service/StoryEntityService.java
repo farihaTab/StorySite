@@ -33,6 +33,9 @@ public interface StoryEntityService {
     ArrayList<StoriesByTag> getStoriesByUserLikedTags(String username);
     ArrayList<StoriesByWriter> getTrendingWritersStories(String username);
     ArrayList<StoryDetails> getStorySuggestionsFromAlikeUsers(String storyid, String categoryname,String username);
+    ArrayList<StoriesByWriter> getSuggestedProfileForUser(String username, ArrayList<StoriesByWriter> trendingWriter);
+    ArrayList<StoryDetails> getTopStories();
+
 
 
 

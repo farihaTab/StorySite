@@ -34,6 +34,8 @@ public interface StoryEntityRepository {
 
     ArrayList<StoryDetails> getStorySuggestionsFromAlikeUsers(String storyid, String categoryname);
     ArrayList<StoryDetails> getTopStoriesByCategoryForUser(String username, String category);
+    ArrayList<StoriesByWriter> getSuggestedProfileForUser(String username);
+    ArrayList<StoryDetails> getTopStories();
 
     //******************tamanna***********************//
 

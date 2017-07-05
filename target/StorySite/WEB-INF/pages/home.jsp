@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: DELL
@@ -107,6 +108,8 @@
 
 <body>
 
+<c:choose>
+    <c:when test="${not empty recommendedStories}">
 <div class="container">
     <h2>Recommended Stories</h2>
     <h4>A fresh set of stories, just for you</h4>
@@ -117,7 +120,7 @@
 
         <div class="carousel-inner">
             <c:set var="idx" value="${0}"/>
-            <c:forEach items="${continueReading}" var="story">
+            <c:forEach items="${recommendedStories}" var="story">
                 <c:choose>
                     <c:when test="${idx==0}">
                         <div class="item active" >
@@ -129,7 +132,9 @@
                                         </a>
                                     </div>
                                     <div class="col-md-6 col-sm-6">
-                                        <h4>${story.storyEntity.title}</h4>
+                                        <h4><a href=" <spring:url value="/story/story?id=${story.storyEntity.storyid}" /> ">
+                                                ${story.storyEntity.title}</a>
+                                        </h4>
                                         <h5>by ${story.storyEntity.writerid}</h5>
                                         <h5>${story.storyEntity.categoryname}</h5>
                                         <h6> ${story.storyEntity.readcount} reads ${story.storyEntity.likecount} likes ${story.storyEntity.chaptercount} part story</h6>
@@ -157,7 +162,8 @@
                                         </a>
                                     </div>
                                     <div class="col-md-6 col-sm-6">
-                                        <h4>${story.storyEntity.title} </h4>
+                                        <h4><a href=" <spring:url value="/story/story?id=${story.storyEntity.storyid}" /> ">
+                                                ${story.storyEntity.title}</a></h4>
                                         <h5>by ${story.storyEntity.writerid}</h5>
                                         <h5>${story.storyEntity.categoryname}</h5>
                                         <h6> ${story.storyEntity.readcount} reads ${story.storyEntity.likecount} likes ${story.storyEntity.chaptercount} part story</h6>
@@ -185,6 +191,8 @@
 
     </div>
 </div>
+    </c:when>
+</c:choose>
 
 <%--<div class="container">
     <h2>Trending</h2>
@@ -248,8 +256,9 @@
 
     </div>
 </div>--%>
-
-<div class="container">
+<c:choose>
+    <c:when test="${not empty continueReading}">
+        <div class="container">
     <h2>Continue Reading</h2>
     <h4>Find more in your library</h4>
 
@@ -259,7 +268,7 @@
 
         <div class="carousel-inner">
             <c:set var="idx" value="${0}"/>
-            <c:forEach items="${recommendedStories}" var="story">
+            <c:forEach items="${continueReading}" var="story">
                 <c:choose>
                     <c:when test="${idx==0}">
                         <div class="item active" >
@@ -271,7 +280,8 @@
                                         </a>
                                     </div>
                                     <div class="col-md-6 col-sm-6">
-                                        <h4>${story.storyEntity.title}</h4>
+                                        <h4><a href=" <spring:url value="/story/story?id=${story.storyEntity.storyid}" /> ">
+                                                ${story.storyEntity.title}</a></h4>
                                         <h5>by ${story.storyEntity.writerid}</h5>
                                         <h5>${story.storyEntity.categoryname}</h5>
                                         <h6> ${story.storyEntity.readcount} reads ${story.storyEntity.likecount} likes ${story.storyEntity.chaptercount} part story</h6>
@@ -299,7 +309,8 @@
                                         </a>
                                     </div>
                                     <div class="col-md-6 col-sm-6">
-                                        <h4>${story.storyEntity.title}</h4>
+                                        <h4><a href=" <spring:url value="/story/story?id=${story.storyEntity.storyid}" /> ">
+                                                ${story.storyEntity.title}</a></h4>
                                         <h5>by ${story.storyEntity.writerid}</h5>
                                         <h5>${story.storyEntity.categoryname}</h5>
                                         <h6> ${story.storyEntity.readcount} reads ${story.storyEntity.likecount} likes ${story.storyEntity.chaptercount} part story</h6>
@@ -326,6 +337,94 @@
 
     </div>
 </div>
+    </c:when>
+</c:choose>
+
+<c:choose>
+    <c:when test="${not empty topStories}">
+        <div class="container">
+            <h2>Top Stories</h2>
+            <h4>Stories liked the most</h4>
+
+            <span style="display:block; height: 20;"></span> <%--vertical space--%>
+
+            <div class="carousel slide row" data-ride="carousel" data-type="multi" data-interval="4000" id="myCarouselTopStories">
+
+                <div class="carousel-inner">
+                    <c:set var="idx" value="${0}"/>
+                    <c:forEach items="${topStories}" var="story">
+                        <c:choose>
+                            <c:when test="${idx==0}">
+                                <div class="item active" >
+                                    <div class="col-md-4 col-sm-6 col-xs-12">
+                                        <div class="row">
+                                            <div class="col-md-5 col-sm-6">
+                                                <a href="#">
+                                                    <img src="<c:url value="/resource/images/storycover/${story.storyEntity.storyid}.jpg"></c:url>" class="img-responsive">
+                                                </a>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6">
+                                                <h4><a href=" <spring:url value="/story/story?id=${story.storyEntity.storyid}" /> ">
+                                                        ${story.storyEntity.title}</a>
+                                                </h4>
+                                                <h5>by ${story.storyEntity.writerid}</h5>
+                                                <h5>${story.storyEntity.categoryname}</h5>
+                                                <h6> ${story.storyEntity.readcount} reads ${story.storyEntity.likecount} likes ${story.storyEntity.chaptercount} part story</h6>
+                                                <c:choose>
+                                                    <c:when test="${story.storyEntity.iscompleted==false}">
+                                                        <p>Ongoing</p>
+                                                    </c:when>
+                                                    <c:otherwise>
+                                                        <p>Completed</p>
+                                                    </c:otherwise>
+                                                </c:choose>
+                                                <p> ${story.storyEntity.description}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </c:when>
+                            <c:otherwise>
+                                <div class="item" >
+                                    <div class="col-md-4 col-sm-6 col-xs-12">
+                                        <div class="row">
+                                            <div class="col-md-5 col-sm-6">
+                                                <a href="#">
+                                                    <img src="<c:url value="/resource/images/storycover/${story.storyEntity.storyid}.jpg"></c:url>" class="img-responsive">
+                                                </a>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6">
+                                                <h4><a href=" <spring:url value="/story/story?id=${story.storyEntity.storyid}" /> ">
+                                                        ${story.storyEntity.title}</a></h4>
+                                                <h5>by ${story.storyEntity.writerid}</h5>
+                                                <h5>${story.storyEntity.categoryname}</h5>
+                                                <h6> ${story.storyEntity.readcount} reads ${story.storyEntity.likecount} likes ${story.storyEntity.chaptercount} part story</h6>
+                                                <c:choose>
+                                                    <c:when test="${story.storyEntity.iscompleted==false}">
+                                                        <p>Ongoing</p>
+                                                    </c:when>
+                                                    <c:otherwise>
+                                                        <p>Completed</p>
+                                                    </c:otherwise>
+                                                </c:choose>
+                                                <p> ${story.storyEntity.description}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </c:otherwise>
+                        </c:choose>
+                        <c:set var="idx" value="${idx+1}"/>
+                    </c:forEach>
+                </div>
+
+                <a class="left carousel-control" href="#myCarouselTopStories" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+                <a class="right carousel-control" href="#myCarouselTopStories" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+
+            </div>
+        </div>
+    </c:when>
+</c:choose>
 
 <c:forEach var="storiesbytag" items="${storiesByTags}" varStatus="status">
 
@@ -351,7 +450,8 @@
                                             </a>
                                         </div>
                                         <div class="col-md-6 col-sm-6">
-                                            <h4>${story.storyEntity.title}</h4>
+                                            <h4><a href=" <spring:url value="/story/story?id=${story.storyEntity.storyid}" /> ">
+                                                    ${story.storyEntity.title}</a></h4>
                                             <h5>by ${story.storyEntity.writerid}</h5>
                                             <h5>${story.storyEntity.categoryname}</h5>
                                             <h6> ${story.storyEntity.readcount} reads ${story.storyEntity.likecount} likes ${story.storyEntity.chaptercount} part story</h6>
@@ -379,7 +479,8 @@
                                             </a>
                                         </div>
                                         <div class="col-md-6 col-sm-6">
-                                            <h4>${story.storyEntity.title}</h4>
+                                            <h4><a href=" <spring:url value="/story/story?id=${story.storyEntity.storyid}" /> ">
+                                                    ${story.storyEntity.title}</a></h4>
                                             <h5>by ${story.storyEntity.writerid}</h5>
                                             <h5>${story.storyEntity.categoryname}</h5>
                                             <h6> ${story.storyEntity.readcount} reads ${story.storyEntity.likecount} likes ${story.storyEntity.chaptercount} part story</h6>
@@ -429,7 +530,9 @@
                                             </a>
                                         </div>
                                         <div class="col-md-6 col-sm-6">
-                                            <h4>${storyentity.title}</h4>
+                                            <h4><a href=" <spring:url value="/story/story?id=${storyentity.storyid}" /> ">
+                                                    ${storyentity.storyid}</a>
+                                            </h4>
                                             <h5>by ${storyentity.writerid}</h5>
                                             <h5>${storyentity.categoryname}</h5>
                                             <h6> ${storyentity.readcount} reads ${storyentity.likecount} likes ${storyentity.chaptercount} part story</h6>
@@ -457,7 +560,9 @@
                                             </a>
                                         </div>
                                         <div class="col-md-6 col-sm-6">
-                                            <h4>${storyentity.title}</h4>
+                                            <h4><a href=" <spring:url value="/story/story?id=${storyentity.storyid}" /> ">
+                                                    ${storyentity.storyid}</a>
+                                            </h4>
                                             <h5>by ${storyentity.writerid}</h5>
                                             <h5>${storyentity.categoryname}</h5>
                                             <h6> ${storyentity.readcount} reads ${storyentity.likecount} likes ${storyentity.chaptercount} part story</h6>
@@ -484,6 +589,88 @@
 
         </div>
     </div>
+
+    <div class="container">
+        <h2>${suggestedWriters[status.index].writerid}</h2>
+        <h4>A suggested profile for you</h4>
+
+        <span style="display:block; height: 20;"></span> <%--vertical space--%>
+
+        <div class="carousel slide row" data-ride="carousel" data-type="multi" data-interval="4000" id="myCarousel${suggestedWriters[status.index].writerid}">
+
+            <div class="carousel-inner">
+                <c:set var="idx" value="${0}"/>
+                <c:forEach items="${suggestedWriters[status.index].storyEntities}" var="storyentity">
+                    <c:choose>
+                        <c:when test="${idx==0}">
+                            <div class="item active" >
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="row">
+                                        <div class="col-md-5 col-sm-6">
+                                            <a href="#">
+                                                <img src="<c:url value="/resource/images/storycover/${storyentity.storyid}.jpg"></c:url>" class="img-responsive">
+                                            </a>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6">
+                                            <h4><a href=" <spring:url value="/story/story?id=${storyentity.storyid}" /> ">
+                                                    ${storyentity.storyid}</a>
+                                            </h4>
+                                            <h5>by ${storyentity.writerid}</h5>
+                                            <h5>${storyentity.categoryname}</h5>
+                                            <h6> ${storyentity.readcount} reads ${storyentity.likecount} likes ${storyentity.chaptercount} part story</h6>
+                                            <c:choose>
+                                                <c:when test="${storyentity.iscompleted==false}">
+                                                    <p>Ongoing</p>
+                                                </c:when>
+                                                <c:otherwise>
+                                                    <p>Completed</p>
+                                                </c:otherwise>
+                                            </c:choose>
+                                            <p> ${storyentity.description}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </c:when>
+                        <c:otherwise>
+                            <div class="item " >
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="row">
+                                        <div class="col-md-5 col-sm-6">
+                                            <a href="#">
+                                                <img src="<c:url value="/resource/images/storycover/${storyentity.storyid}.jpg"></c:url>" class="img-responsive">
+                                            </a>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6">
+                                            <h4><a href=" <spring:url value="/story/story?id=${storyentity.storyid}" /> ">
+                                                    ${storyentity.storyid}</a>
+                                            </h4>
+                                            <h5>by ${storyentity.writerid}</h5>
+                                            <h5>${storyentity.categoryname}</h5>
+                                            <h6> ${storyentity.readcount} reads ${storyentity.likecount} likes ${storyentity.chaptercount} part story</h6>
+                                            <c:choose>
+                                                <c:when test="${storyentity.iscompleted==false}">
+                                                    <p>Ongoing</p>
+                                                </c:when>
+                                                <c:otherwise>
+                                                    <p>Completed</p>
+                                                </c:otherwise>
+                                            </c:choose>
+                                            <p> ${storyentity.description}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </c:otherwise>
+                    </c:choose>
+                    <c:set var="idx" value="${idx+1}"/>
+                </c:forEach>
+            </div>
+            <a class="left carousel-control" href="#myCarousel${suggestedWriters[status.index].writerid}" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+            <a class="right carousel-control" href="#myCarousel${suggestedWriters[status.index].writerid}" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+
+        </div>
+    </div>
 </c:forEach>
 
 
@@ -491,7 +678,7 @@
 <div class="container">
     <h2>Recommended profiles</h2>
     <h4>Writers we think you'll love</h4>
-&lt;%&ndash;todo: profile design&ndash;%&gt;
+&lt;%&ndash;todo: profile design & ndash;%&gt;
     <span style="display:block; height: 20;"></span> &lt;%&ndash;vertical space&ndash;%&gt;
 
     <div class="carousel slide row" data-ride="carousel" data-type="multi" data-interval="4000" id="myCarousel">

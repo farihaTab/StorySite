@@ -128,11 +128,15 @@ public class StoryEntityController {
         model.addAttribute("continueReading",continueReading);
         //ArrayList<StoryDetails> trendingStories = storyEntityService.getTrendingStories();
         //model.addAttribute("trendingStories",trendingStories);
+        ArrayList<StoryDetails> topStories = storyEntityService.getTopStories();
+        model.addAttribute("topStories",topStories);
         ArrayList<StoriesByTag> storiesByTags = storyEntityService.getStoriesByUserLikedTags(username);
         model.addAttribute("storiesByTags",storiesByTags);
         System.out.println("size "+storiesByTags.size());
         ArrayList<StoriesByWriter> trendingWriter = storyEntityService.getTrendingWritersStories(username);
         model.addAttribute("trendingWriter",trendingWriter);
+        ArrayList<StoriesByWriter> suggestedProfiles = storyEntityService.getSuggestedProfileForUser(username,trendingWriter);
+        model.addAttribute("suggestedWriters",suggestedProfiles);
 
         return "home";
     }
