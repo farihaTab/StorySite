@@ -37,6 +37,14 @@ public class StoryEntityController {
         return "stories";
     }
 
+    @RequestMapping(value = "/profile" ,method = RequestMethod.GET)
+    public String getProfileByUsername(@RequestParam("username") String profileid, Model model) {
+
+
+
+        return "profile";
+    }
+
     @RequestMapping(value = "/story" ,method = RequestMethod.GET)
     public String getStoryById(@RequestParam("id") String storyid, Model model) {
 
