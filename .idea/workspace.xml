@@ -5,19 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6fb0dfff-6ffa-4b8a-aeb0-dfc32a4a566e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Model/Follow.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Controller/DAO/StoryEntityRepository.java" afterPath="$PROJECT_DIR$/src/main/java/Controller/DAO/StoryEntityRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Controller/DAO/StoryEntityRepositoryImpl.java" afterPath="$PROJECT_DIR$/src/main/java/Controller/DAO/StoryEntityRepositoryImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Controller/Service/StoryEntityService.java" afterPath="$PROJECT_DIR$/src/main/java/Controller/Service/StoryEntityService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Controller/Service/StoryEntityServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/Controller/Service/StoryEntityServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Controller/StoryEntityController.java" afterPath="$PROJECT_DIR$/src/main/java/Controller/StoryEntityController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Model/FollowtableEntity.java" afterPath="$PROJECT_DIR$/src/main/java/Model/FollowtableEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Model/FollowtableEntityPK.java" afterPath="$PROJECT_DIR$/src/main/java/Model/FollowtableEntityPK.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Model/StoryDetails.java" afterPath="$PROJECT_DIR$/src/main/java/Model/StoryDetails.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Model/UserprofileEntity.java" afterPath="$PROJECT_DIR$/src/main/java/Model/UserprofileEntity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/profile.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/profile.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/storyDetails.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/storyDetails.jsp" />
     </list>
     <ignored path="StorySite.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -93,74 +84,43 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/Controller/StoryEntityController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
-              <caret line="201" column="70" lean-forward="false" selection-start-line="201" selection-start-column="70" selection-end-line="201" selection-end-column="70" />
+              <caret line="212" column="36" lean-forward="false" selection-start-line="212" selection-start-column="36" selection-end-line="212" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="profile.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/profile.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="82" column="72" lean-forward="false" selection-start-line="82" selection-start-column="72" selection-end-line="82" selection-end-column="72" />
+            <state relative-caret-position="104">
+              <caret line="110" column="119" lean-forward="false" selection-start-line="110" selection-start-column="119" selection-end-line="110" selection-end-column="119" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1499425960557" expanded="false" signature="2257:2266" ph="..." />
-                <marker date="1499425960557" expanded="false" signature="2549:2559" ph="..." />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1499427536225" expanded="false" signature="2257:2266" ph="..." />
+                <marker date="1499427536225" expanded="false" signature="2549:2559" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="storyDetails.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="storyDetails.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/storyDetails.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="154" column="46" lean-forward="false" selection-start-line="154" selection-start-column="46" selection-end-line="154" selection-end-column="46" />
+            <state relative-caret-position="39">
+              <caret line="154" column="12" lean-forward="true" selection-start-line="154" selection-start-column="12" selection-end-line="275" selection-end-column="18" />
               <folding>
                 <element signature="n#div#2;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StoryEntityRepositoryImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Controller/DAO/StoryEntityRepositoryImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="228" column="0" lean-forward="false" selection-start-line="228" selection-start-column="0" selection-end-line="228" selection-end-column="0" />
-              <folding>
-                <element signature="e#11899#11914#0" expanded="true" />
-                <element signature="e#13531#13545#0" expanded="true" />
-                <element signature="e#15817#15825#0" expanded="true" />
-                <element signature="e#17017#17031#0" expanded="true" />
-                <element signature="e#18120#18128#0" expanded="true" />
-                <element signature="e#20056#20070#0" expanded="true" />
-                <element signature="e#20822#20836#0" expanded="true" />
-                <element signature="e#21968#21976#0" expanded="true" />
-                <element signature="e#23224#23241#0" expanded="true" />
-                <element signature="e#26002#26016#0" expanded="true" />
-                <element signature="e#27106#27114#0" expanded="true" />
-                <element signature="e#28259#28273#0" expanded="true" />
-                <element signature="e#29363#29371#0" expanded="true" />
-                <element signature="e#31745#31762#0" expanded="true" />
-                <element signature="e#33262#33276#0" expanded="true" />
-                <element signature="e#34375#34383#0" expanded="true" />
-                <element signature="e#36922#36930#0" expanded="true" />
-                <element signature="e#38199#38207#0" expanded="true" />
-                <element signature="e#39126#39140#0" expanded="true" />
-                <element signature="e#39491#39499#0" expanded="true" />
-                <element signature="e#42382#42390#0" expanded="true" />
-                <element signature="e#43492#43505#0" expanded="true" />
-                <marker date="1499424382717" expanded="true" signature="40017:40054" ph="SELECT STORY... dual" />
-                <marker date="1499424382717" expanded="true" signature="40287:40413" ph="INSERT INTO STORY... " />
-                <marker date="1499424382717" expanded="true" signature="41843:41889" ph="SELECT LASTC... STORY" />
-                <marker date="1499424382717" expanded="true" signature="42747:42800" ph="INSERT INTO STORYTAG... " />
-                <marker date="1499424382717" expanded="true" signature="43551:43674" ph="SELECT * FRO... STORY" />
-                <marker date="1499424382717" expanded="true" signature="44967:45014" ph="SELECT CHAPT... STORY" />
-                <marker date="1499424382717" expanded="true" signature="45463:45510" ph="SELECT FIRST... STORY" />
               </folding>
             </state>
           </provider>
@@ -214,9 +174,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>fariha</find>
-      <find>storyLi</find>
-      <find>liked</find>
       <find>You'</find>
       <find>continueReading</find>
       <find>empty</find>
@@ -242,8 +199,11 @@
       <find>abou</find>
       <find>tag</find>
       <find>readC</find>
-      <find>/follow</find>
       <find>Foll</find>
+      <find>lo</find>
+      <find>/follow</find>
+      <find>table of</find>
+      <find>loop</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -301,12 +261,12 @@
         <option value="$PROJECT_DIR$/src/main/java/Controller/Service/StoryEntityServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/Controller/DAO/StoryEntityRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/Model/StoryDetails.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Controller/DAO/StoryEntityRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/Model/UserprofileEntity.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/storyDetails.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/Model/FollowtableEntityPK.java" />
         <option value="$PROJECT_DIR$/src/main/java/Model/FollowtableEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/Controller/StoryEntityController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Controller/DAO/StoryEntityRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/profile.jsp" />
       </list>
     </option>
@@ -1436,12 +1396,21 @@
       <workItem from="1498914158889" duration="16841000" />
       <workItem from="1499265751089" duration="17205000" />
       <workItem from="1499319367341" duration="656000" />
-      <workItem from="1499401609225" duration="12996000" />
+      <workItem from="1499401609225" duration="14504000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="307351000" />
+    <option name="totallyTimeSpent" value="308859000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1460,7 +1429,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.49394855" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1986,44 +1955,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/DAO/StoryEntityRepositoryImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="228" column="0" lean-forward="false" selection-start-line="228" selection-start-column="0" selection-end-line="228" selection-end-column="0" />
-          <folding>
-            <element signature="e#11899#11914#0" expanded="true" />
-            <element signature="e#13531#13545#0" expanded="true" />
-            <element signature="e#15817#15825#0" expanded="true" />
-            <element signature="e#17017#17031#0" expanded="true" />
-            <element signature="e#18120#18128#0" expanded="true" />
-            <element signature="e#20056#20070#0" expanded="true" />
-            <element signature="e#20822#20836#0" expanded="true" />
-            <element signature="e#21968#21976#0" expanded="true" />
-            <element signature="e#23224#23241#0" expanded="true" />
-            <element signature="e#26002#26016#0" expanded="true" />
-            <element signature="e#27106#27114#0" expanded="true" />
-            <element signature="e#28259#28273#0" expanded="true" />
-            <element signature="e#29363#29371#0" expanded="true" />
-            <element signature="e#31745#31762#0" expanded="true" />
-            <element signature="e#33262#33276#0" expanded="true" />
-            <element signature="e#34375#34383#0" expanded="true" />
-            <element signature="e#36922#36930#0" expanded="true" />
-            <element signature="e#38199#38207#0" expanded="true" />
-            <element signature="e#39126#39140#0" expanded="true" />
-            <element signature="e#39491#39499#0" expanded="true" />
-            <element signature="e#42382#42390#0" expanded="true" />
-            <element signature="e#43492#43505#0" expanded="true" />
-            <marker date="1499424382717" expanded="true" signature="40017:40054" ph="SELECT STORY... dual" />
-            <marker date="1499424382717" expanded="true" signature="40287:40413" ph="INSERT INTO STORY... " />
-            <marker date="1499424382717" expanded="true" signature="41843:41889" ph="SELECT LASTC... STORY" />
-            <marker date="1499424382717" expanded="true" signature="42747:42800" ph="INSERT INTO STORYTAG... " />
-            <marker date="1499424382717" expanded="true" signature="43551:43674" ph="SELECT * FRO... STORY" />
-            <marker date="1499424382717" expanded="true" signature="44967:45014" ph="SELECT CHAPT... STORY" />
-            <marker date="1499424382717" expanded="true" signature="45463:45510" ph="SELECT FIRST... STORY" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Model/FollowtableEntityPK.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -2046,30 +1977,77 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Controller/StoryEntityController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
-          <caret line="201" column="70" lean-forward="false" selection-start-line="201" selection-start-column="70" selection-end-line="201" selection-end-column="70" />
+          <caret line="212" column="36" lean-forward="false" selection-start-line="212" selection-start-column="36" selection-end-line="212" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/profile.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/DAO/StoryEntityRepositoryImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="82" column="72" lean-forward="false" selection-start-line="82" selection-start-column="72" selection-end-line="82" selection-end-column="72" />
+        <state relative-caret-position="104">
+          <caret line="870" column="19" lean-forward="false" selection-start-line="870" selection-start-column="17" selection-end-line="870" selection-end-column="19" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1499425960557" expanded="false" signature="2257:2266" ph="..." />
-            <marker date="1499425960557" expanded="false" signature="2549:2559" ph="..." />
+            <element signature="e#11899#11914#0" expanded="true" />
+            <element signature="e#13531#13545#0" expanded="true" />
+            <element signature="e#15817#15825#0" expanded="true" />
+            <element signature="e#17017#17031#0" expanded="true" />
+            <element signature="e#18120#18128#0" expanded="true" />
+            <element signature="e#20056#20070#0" expanded="true" />
+            <element signature="e#20822#20836#0" expanded="true" />
+            <element signature="e#21968#21976#0" expanded="true" />
+            <element signature="e#23224#23241#0" expanded="true" />
+            <element signature="e#26002#26016#0" expanded="true" />
+            <element signature="e#27106#27114#0" expanded="true" />
+            <element signature="e#28259#28273#0" expanded="true" />
+            <element signature="e#29363#29371#0" expanded="true" />
+            <element signature="e#31745#31762#0" expanded="true" />
+            <element signature="e#33262#33276#0" expanded="true" />
+            <element signature="e#34375#34383#0" expanded="true" />
+            <element signature="e#36924#36932#0" expanded="true" />
+            <element signature="e#38203#38211#0" expanded="true" />
+            <element signature="e#39130#39144#0" expanded="true" />
+            <element signature="e#39495#39503#0" expanded="true" />
+            <element signature="e#42386#42394#0" expanded="true" />
+            <element signature="e#43496#43509#0" expanded="true" />
+            <marker date="1499427437296" expanded="true" signature="40021:40058" ph="SELECT STORY... dual" />
+            <marker date="1499427437296" expanded="true" signature="40291:40417" ph="INSERT INTO STORY... " />
+            <marker date="1499427437296" expanded="true" signature="41847:41893" ph="SELECT LASTC... STORY" />
+            <marker date="1499427437296" expanded="true" signature="42751:42804" ph="INSERT INTO STORYTAG... " />
+            <marker date="1499427437296" expanded="true" signature="43555:43678" ph="SELECT * FRO... STORY" />
+            <marker date="1499427437296" expanded="true" signature="44971:45018" ph="SELECT CHAPT... STORY" />
+            <marker date="1499427437296" expanded="true" signature="45467:45514" ph="SELECT FIRST... STORY" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/storyDetails.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="154" column="46" lean-forward="false" selection-start-line="154" selection-start-column="46" selection-end-line="154" selection-end-column="46" />
+        <state relative-caret-position="39">
+          <caret line="154" column="12" lean-forward="true" selection-start-line="154" selection-start-column="12" selection-end-line="275" selection-end-column="18" />
           <folding>
             <element signature="n#div#2;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/profile.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="110" column="119" lean-forward="false" selection-start-line="110" selection-start-column="119" selection-end-line="110" selection-end-column="119" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1499427536225" expanded="false" signature="2257:2266" ph="..." />
+            <marker date="1499427536225" expanded="false" signature="2549:2559" ph="..." />
           </folding>
         </state>
       </provider>

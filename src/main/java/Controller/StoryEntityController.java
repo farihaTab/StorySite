@@ -202,17 +202,15 @@ public class StoryEntityController {
             logger.info("inserting follow entiry " + follow.toString());
             storyEntityService.insertFollowEntity(follow);
             model.addAttribute("message","insert");
-            String referer = request.getHeader("Referer");
-            System.out.println("referer: "+referer);
-            return "redirect:"+ referer;
+
         }else {
             System.out.println("deleting follow");
             storyEntityService.deleteFollowEntity(follow);
             model.addAttribute("message","delete");
         }
-        return "hello";
-
-        //return "redirect:/story/story?id="+1;
+        String referer = request.getHeader("Referer");
+        System.out.println("referer: "+referer);
+        return "redirect:"+ referer;
     }
 
 

@@ -889,7 +889,7 @@ public class StoryEntityRepositoryImpl implements StoryEntityRepository {
         Query query=session.createQuery(hql);
         query.setParameter("id",profileid);
         query.setParameter("username",username);
-        query.setMaxResults(6);
+        //query.setMaxResults(6);
 
         List<Object[]> list = query.list();
         ArrayList<Follow> followingList = new ArrayList<Follow>();
@@ -922,7 +922,7 @@ public class StoryEntityRepositoryImpl implements StoryEntityRepository {
         Query query=session.createQuery(hql);
         query.setParameter("id",profileid);
         query.setParameter("username",username);
-        query.setMaxResults(6);
+        //query.setMaxResults(6);
 
         List<Object[]> list = query.list();
         ArrayList<Follow> followerList = new ArrayList<Follow>();
