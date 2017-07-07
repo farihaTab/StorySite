@@ -65,4 +65,13 @@ public class FollowtableEntity {
         result = 31 * result + (updatedat != null ? updatedat.hashCode() : 0);
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "FollowtableEntity{" +
+                "follower='" + follower + '\'' +
+                ", followed='" + followed + '\'' +
+                ", updatedat=" + updatedat +
+                '}';
+    }
 }

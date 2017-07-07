@@ -1,6 +1,7 @@
 package Model;
 
 import javax.persistence.*;
+import java.sql.Time;
 
 /**
  * Created by DELL on 7/1/2017.
@@ -12,6 +13,10 @@ public class UserprofileEntity {
     private String aboutwriter;
     private Long followcount;
     private Long currentmonthfollower;
+    private String firstName;
+    private String lastName;
+    private Time joinedAt;
+    private long bookcount;
 
     @Id
     @Column(name = "WRITER", nullable = false, length = 20)
@@ -76,5 +81,55 @@ public class UserprofileEntity {
         result = 31 * result + (followcount != null ? followcount.hashCode() : 0);
         result = 31 * result + (currentmonthfollower != null ? currentmonthfollower.hashCode() : 0);
         return result;
+    }
+
+    @Transient
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    @Transient
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    @Transient
+    public Time getJoinedAt() {
+        return joinedAt;
+    }
+
+    public void setJoinedAt(Time joinedAt) {
+        this.joinedAt = joinedAt;
+    }
+
+    @Transient
+    public long getBookcount() {
+        return bookcount;
+    }
+
+    public void setBookcount(long bookcount) {
+        this.bookcount = bookcount;
+    }
+
+    @Override
+    public String toString() {
+        return "UserprofileEntity{" +
+                "writer='" + writer + '\'' +
+                ", aboutwriter='" + aboutwriter + '\'' +
+                ", followcount=" + followcount +
+                ", currentmonthfollower=" + currentmonthfollower +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", joinedAt=" + joinedAt +
+                ", bookcount=" + bookcount +
+                '}';
     }
 }

@@ -33,17 +33,17 @@
 <body>
 
 <div class="jumbotron">
-    <img src="<c:url value="/resource/images/profilephoto/tamanna.jpg"></c:url>" alt="author-pic" class="media-object img-circle" style="width:200px;height:200px;margin: auto;">
+    <img src="<c:url value="/resource/images/profilephoto/${writerProfile.writer}.jpg"></c:url>" alt="author-pic" class="media-object img-circle" style="width:200px;height:200px;margin: auto;">
     <hr>
-    <h3 style="text-align: center;">First name last name</h3>
-    <h3 style="text-align: center;">@username</h3>
+    <h3 style="text-align: center;">${writerProfile.firstName} ${writerProfile.lastName}</h3>
+    <h3 style="text-align: center;">@${writerProfile.writer}</h3>
     <hr>
-    <h5 style="text-align: center;"> 4 works <span style="padding-left:24px;"></span> 65 followers</h5>
+    <h5 style="text-align: center;"> ${writerProfile.bookcount} works <span style="padding-left:24px;"></span> ${writerProfile.followcount} followers</h5>
     <hr>
     <div align="center">
-        <%--<form:form  modelAttribute="formFollow" method = "POST" action = "/StorySite/story/follow">
+        <form:form  modelAttribute="formFollow" method = "POST" action = "/StorySite/story/follow">
             <form:input id="follower" path="follower" type="hidden" value="${username}"/>
-            <form:input id="followed" path="followed" type="hidden" value="${story.writerid}"/>
+            <form:input id="followed" path="followed" type="hidden" value="${writerProfile.writer}"/>
             <c:choose>
                 <c:when test="${followed==true}">
                     <form:button type="submit" name="like" value="Followed" class="btn btn-warning">
@@ -56,10 +56,8 @@
                     </form:button>
                 </c:otherwise>
             </c:choose>
-        </form:form>--%>
-            <button type="submit" name="like" value="Follow" class="btn btn-warning" >
-                <span class="glyphicon glyphicon-unchecked" style="color: red"></span> Follow
-            </button>
+        </form:form>
+
     </div>
 
 </div>
@@ -72,27 +70,57 @@
         <div class="col-sm-4">
             <div class="well">
                 <div class="row">
-                    <h4>location</h4>
-                    <h4>joined date</h4>
+                    <%--<h4>location</h4>--%>
+                    <h4>joined ${writerProfile.joinedAt}</h4>
                     <hr>
                     <div style="height: auto; overflow: auto;">
                         <h4>Following</h4>
-                        <p style="float: left; font-size: 9pt; text-align: center; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
-                            <img src="<c:url value="/resource/images/profilephoto/fariha.jpg"></c:url>" alt="author-pic" title="username" class="media-object img-circle" style="width:60px;height:60px;margin: auto;">
-                            <button type="submit" name="like" value="Follow" class="btn btn-warning" >
-                                <span class="glyphicon glyphicon-unchecked" style="color: red"></span> Follow
-                            </button>
-                        </p>
+                        <c:forEach items="${followingList}" var="following">
+                        <div style="float: left; font-size: 9pt; text-align: center; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+                            <img src="<c:url value="/resource/images/profilephoto/${following.username}.jpg"></c:url>" alt="author-pic" title="username" class="media-object img-circle" style="width:60px;height:60px;margin: auto;">
+                            <form:form  modelAttribute="formFollow" method = "POST" action = "/StorySite/story/follow">
+                                <form:input id="follower" path="follower" type="hidden" value="${username}"/>
+                                <form:input id="followed" path="followed" type="hidden" value="${following.username}"/>
+                                <c:choose>
+                                    <c:when test="${following.followed==true}">
+                                        <form:button type="submit" name="like" value="Followed" class="btn btn-warning">
+                                            <span class="glyphicon glyphicon-check" style="color:red"></span>Followed
+                                        </form:button>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <form:button type="submit" name="like" value="Follow" class="btn btn-warning">
+                                            <span class="glyphicon glyphicon-unchecked" style="color: red"></span> Follow
+                                        </form:button>
+                                    </c:otherwise>
+                                </c:choose>
+                            </form:form>
+                        </div>
+                        </c:forEach>
                     </div>
                     <hr>
                     <div style="height: auto; overflow: auto;">
                         <h4>Followed By</h4>
-                        <p style="float: left; font-size: 9pt; text-align: center; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
-                            <img src="<c:url value="/resource/images/profilephoto/fariha.jpg"></c:url>" alt="author-pic" title="username" class="media-object img-circle" style="width:60px;height:60px;margin: auto;">
-                            <button type="submit" name="like" value="Follow" class="btn btn-warning" >
-                                <span class="glyphicon glyphicon-unchecked" style="color: red"></span> Follow
-                            </button>
-                        </p>
+                        <c:forEach items="${followerList}" var="follower">
+                        <div style="float: left; font-size: 9pt; text-align: center; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+                            <img src="<c:url value="/resource/images/profilephoto/${follower.username}.jpg"></c:url>" alt="author-pic" title="username" class="media-object img-circle" style="width:60px;height:60px;margin: auto;">
+                            <form:form  modelAttribute="formFollow" method = "POST" action = "/StorySite/story/follow">
+                                <form:input id="follower" path="follower" type="hidden" value="${username}"/>
+                                <form:input id="followed" path="followed" type="hidden" value="${follower.username}"/>
+                                <c:choose>
+                                    <c:when test="${follower.followed==true}">
+                                        <form:button type="submit" name="like" value="Followed" class="btn btn-warning">
+                                            <span class="glyphicon glyphicon-check" style="color:red"></span>Followed
+                                        </form:button>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <form:button type="submit" name="like" value="Follow" class="btn btn-warning">
+                                            <span class="glyphicon glyphicon-unchecked" style="color: red"></span> Follow
+                                        </form:button>
+                                    </c:otherwise>
+                                </c:choose>
+                            </form:form>
+                        </div>
+                        </c:forEach>
                     </div>
                 </div>
 
@@ -100,47 +128,32 @@
         </div>
         <div class="col-sm-8">
             <div class="well">
-                about author
+                <h3>About writer</h3>
+                <hr>
+                ${writerProfile.aboutwriter}
             </div>
             <div class="well">
-                <h2>Stories by Firstname</h2>
+                <h2>Stories by ${writerProfile.firstName}</h2>
                 <div class="well" >
-                    <%--<c:forEach items="${userWhoLikesThisAlsoLikesThese}" var="suggestion">--%>
-                    <div class="row">
-                            <div class="col-sm-2">
-                                <img src="img_avatar1.png" alt="story cover" class="media-object" style="width:80px;height:120px;">
-                            </div>
-                            <div class="col-sm-6">
-                                <h4 class="media-heading">title${suggestion.storyEntity.title}</h4>
-                                <h5> by @${suggestion.storyEntity.title}</h5>
-                                <p>description ${suggestion.storyEntity.description}</p>
-                            </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-sm-2">
-                            <img src="img_avatar1.png" alt="story cover" class="media-object" style="width:80px;height:120px;">
-                        </div>
-                        <div class="col-sm-6">
-                            <h4 class="media-heading">title${suggestion.storyEntity.title}</h4>
-                            <h5> by @${suggestion.storyEntity.title}</h5>
-                            <p>description ${suggestion.storyEntity.description}</p>
-                        </div>
-                    </div>
-                    <hr>
+                    <c:forEach items="${works}" var="work">
                         <div class="row">
-                            <div class="col-sm-2">
-                                <img src="img_avatar1.png" alt="story cover" class="media-object" style="width:80px;height:120px;">
-                            </div>
-                            <div class="col-sm-6">
-                                <h4 class="media-heading">title${suggestion.storyEntity.title}</h4>
-                                <h5> by @${suggestion.storyEntity.title}</h5>
-                                <p>description ${suggestion.storyEntity.description}</p>
-                            </div>
+                                <div class="col-sm-2">
+                                    <img src="<c:url value="/resource/images/storycover/${work.storyEntity.storyid}.jpg"></c:url>" alt="book-cover" class="media-object" style="width:80px;height:120px;">
+                                </div>
+                                <div class="col-sm-6">
+                                    <h4 class="media-heading">${work.storyEntity.title}</h4>
+                                    <p>${work.storyEntity.description}</p>
+                                    <p>
+                                        <c:forEach items="${work.tags}" var="tag">
+                                                <a class="on-navigate" href=" <spring:url value="/tags/tag?id=${tag}" /> " >
+                                                        ${tag}
+                                                </a>
+                                        </c:forEach>
+                                    </p>
+                                </div>
                         </div>
                         <hr>
-
-                    <%--</c:forEach>--%>
+                    </c:forEach>
                 </div>
             </div>
         </div>

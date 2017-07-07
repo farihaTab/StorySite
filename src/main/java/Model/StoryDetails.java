@@ -18,6 +18,11 @@ public class StoryDetails {
         this.tags = tags;
     }
 
+    public StoryDetails(StoryEntity storyEntity, ArrayList<String> tags) {
+        this.storyEntity = storyEntity;
+        this.tags = tags;
+    }
+
     public StoryEntity getStoryEntity() {
         return storyEntity;
     }

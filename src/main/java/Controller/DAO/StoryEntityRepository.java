@@ -37,6 +37,16 @@ public interface StoryEntityRepository {
     ArrayList<StoriesByWriter> getSuggestedProfileForUser(String username);
     ArrayList<StoryDetails> getTopStories();
 
+
+    UserprofileEntity getWriterProfile(String profileid);
+
+    ArrayList<Follow> getFollowingList(String profileid, String username);
+
+    ArrayList<Follow> getFollowerList(String profileid, String username);
+
+
+    ArrayList<StoryDetails> getWorksOfWriter(String profileid);
+
     //******************tamanna***********************//
 
 
@@ -49,5 +59,4 @@ public interface StoryEntityRepository {
     int getLastChapter(int storyid);
     boolean insertTag(StoryEntity newStory);
     List<StoryEntity> getSearchResult(String tagname);
-
 }

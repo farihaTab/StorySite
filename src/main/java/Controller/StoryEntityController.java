@@ -39,8 +39,22 @@ public class StoryEntityController {
 
     @RequestMapping(value = "/profile" ,method = RequestMethod.GET)
     public String getProfileByUsername(@RequestParam("username") String profileid, Model model) {
+        System.out.println("Get profile of "+profileid);
+        model.addAttribute("username",username);
+        UserprofileEntity writerProfile = storyEntityService.getWriterProfile(profileid);
+        model.addAttribute("writerProfile",writerProfile);
+        boolean followed = storyEntityService.writerFollowedByUser(username,profileid);
+        model.addAttribute("followed",followed);
 
+        FollowtableEntity follow = new FollowtableEntity();
+        model.addAttribute("formFollow",follow);
 
+        ArrayList<Follow> followingList = storyEntityService.getFollowingList(profileid,username);
+        model.addAttribute("followingList",followingList);
+        ArrayList<Follow> followerList = storyEntityService.getFollowerList(profileid,username);
+        model.addAttribute("followerList",followerList);
+        ArrayList<StoryDetails> works = storyEntityService.getWorksOfWriter(profileid);
+        model.addAttribute("works",works);
 
         return "profile";
     }
@@ -182,12 +196,15 @@ public class StoryEntityController {
     @RequestMapping(value = "/follow" , method = RequestMethod.POST)
     public String insertFollow(@ModelAttribute("formFollow") FollowtableEntity follow,
                               @RequestParam(required=false, defaultValue="") String like,
-                              Model model){
+                              Model model,HttpServletRequest request){
 
         if(like.equals("Follow")){
-            logger.info("inserting follow entiry " + follow);
+            logger.info("inserting follow entiry " + follow.toString());
             storyEntityService.insertFollowEntity(follow);
             model.addAttribute("message","insert");
+            String referer = request.getHeader("Referer");
+            System.out.println("referer: "+referer);
+            return "redirect:"+ referer;
         }else {
             System.out.println("deleting follow");
             storyEntityService.deleteFollowEntity(follow);

@@ -36,6 +36,15 @@ public interface StoryEntityService {
     ArrayList<StoriesByWriter> getSuggestedProfileForUser(String username, ArrayList<StoriesByWriter> trendingWriter);
     ArrayList<StoryDetails> getTopStories();
 
+    UserprofileEntity getWriterProfile(String profileid);
+
+    ArrayList<Follow> getFollowingList(String profileid, String username);
+
+
+    ArrayList<StoryDetails> getWorksOfWriter(String profileid);
+
+    ArrayList<Follow> getFollowerList(String profileid, String username);
+
 
 
 
@@ -48,5 +57,4 @@ public interface StoryEntityService {
     int getLastChapter(int storyid);
     boolean insertTag(StoryEntity newStory);
     List<StoryEntity> getSearchResult(String tagname);
-
 }

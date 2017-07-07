@@ -16,6 +16,9 @@ public class FollowtableEntityPK implements Serializable {
         this.followed = followed;
     }
 
+    public FollowtableEntityPK() {
+    }
+
     @Column(name = "FOLLOWER", nullable = false, length = 20)
     @Id
     public String getFollower() {
@@ -55,4 +58,6 @@ public class FollowtableEntityPK implements Serializable {
         result = 31 * result + (followed != null ? followed.hashCode() : 0);
         return result;
     }
+
+
 }

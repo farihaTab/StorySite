@@ -291,7 +291,7 @@
                         <c:forEach items="${userWhoLikesThisAlsoLikesThese}" var="suggestion">
                             <div class="media">
                                 <div class="media-left">
-                                    <img src="img_avatar1.png" alt="story cover" class="media-object" style="width:80px;height:120px;">
+                                    <img src="<c:url value="/resource/images/storycover/${suggestion.storyEntity.storyid}.jpg"></c:url>" alt="book-cover" class="media-object" style="width:80px;height:120px;">
                                 </div>
                                 <div class="media-body">
                                     <h4 class="media-heading">${suggestion.storyEntity.title}</h4>

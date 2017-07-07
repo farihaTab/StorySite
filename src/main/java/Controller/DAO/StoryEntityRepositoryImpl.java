@@ -5,12 +5,10 @@ import Model.*;
 import org.hibernate.*;
 import org.hibernate.criterion.Property;
 import org.hibernate.criterion.Restrictions;
-import org.hibernate.jdbc.Work;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.sql.*;
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
@@ -837,6 +835,144 @@ public class StoryEntityRepositoryImpl implements StoryEntityRepository {
             topStories.add(new StoryDetails(story, userprofile, tags));
         }
         return topStories;
+    }
+
+    @Override
+    public UserprofileEntity getWriterProfile(String profileid) {
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+
+        String hql = "from Model.UserprofileEntity where writer = :id";
+        Query query=session.createQuery(hql);
+        query.setParameter("id",profileid);
+        UserprofileEntity userprofileEntity = (UserprofileEntity)query.uniqueResult();
+
+        hql = "select au.firstname, au.lastname, au.createdat from Model.AccountuserEntity au where au.username = :id";
+        query = session.createQuery(hql);
+        query.setParameter("id",profileid);
+        Object[] objects = (Object[])query.uniqueResult();
+        userprofileEntity.setFirstName((String) objects[0]);
+        userprofileEntity.setLastName((String)objects[1]);
+        userprofileEntity.setJoinedAt((Time)objects[2]);
+
+        hql = "select writerid, count(storyid) " +
+                "from Model.StoryEntity " +
+                "WHERE writerid = :id " +
+                "group by writerid ";
+        query = session.createQuery(hql);
+        query.setParameter("id",profileid);
+        objects = (Object[])query.uniqueResult();
+        userprofileEntity.setBookcount((Long)objects[1]);
+
+        System.out.println("profile details: "+userprofileEntity.toString());
+
+        session.flush();
+        session.getTransaction().commit();
+        session.close();
+
+        return userprofileEntity;
+
+    }
+
+    @Override
+    public ArrayList<Follow> getFollowingList(String profileid, String username) {
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+
+        System.out.println("Following list for "+username);
+
+        String hql = "select ft.followed " +
+                ", (select f.followed from Model.FollowtableEntity f where f.followed = ft.followed and f.follower = :username)"+
+                "from Model.FollowtableEntity ft " +
+                "where follower = :id " +
+                "order by ft.updatedat desc ";
+        Query query=session.createQuery(hql);
+        query.setParameter("id",profileid);
+        query.setParameter("username",username);
+        query.setMaxResults(6);
+
+        List<Object[]> list = query.list();
+        ArrayList<Follow> followingList = new ArrayList<Follow>();
+        for(Object[] objects:list){
+            if(objects[1]== null){
+                followingList.add(new Follow((String)objects[0],false));
+            }else
+                followingList.add(new Follow((String)objects[0],true));
+        }
+        System.out.println(followingList.toString());
+        session.flush();
+        session.getTransaction().commit();
+        session.close();
+
+        return followingList;
+    }
+
+    @Override
+    public ArrayList<Follow> getFollowerList(String profileid, String username) {
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+
+        System.out.println("Follower list for "+username);
+
+        String hql = "select ft.follower " +
+                ", (select f.follower from Model.FollowtableEntity f where f.followed = ft.follower and f.follower = :username)"+
+                "from Model.FollowtableEntity ft " +
+                "where followed = :id " +
+                "order by ft.updatedat desc ";
+        Query query=session.createQuery(hql);
+        query.setParameter("id",profileid);
+        query.setParameter("username",username);
+        query.setMaxResults(6);
+
+        List<Object[]> list = query.list();
+        ArrayList<Follow> followerList = new ArrayList<Follow>();
+        for(Object[] objects:list){
+            if(objects[1]== null){
+                followerList.add(new Follow((String)objects[0],false));
+            }else
+                followerList.add(new Follow((String)objects[0],true));
+        }
+        System.out.println(followerList.toString());
+        session.flush();
+        session.getTransaction().commit();
+        session.close();
+
+        return followerList;
+    }
+
+    @Override
+    public ArrayList<StoryDetails> getWorksOfWriter(String profileid) {
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+
+        System.out.println("Works of "+profileid);
+
+        String hql = "from Model.StoryEntity where writerid = :id";
+        Query query=session.createQuery(hql);
+        query.setParameter("id",profileid);
+
+        List<StoryEntity> list = query.list();
+        ArrayList<StoryDetails> works = new ArrayList<StoryDetails>();
+
+        for (StoryEntity work:list) {
+            hql = "select st.tagname from Model.StorytagEntity st where st.taggedstory = :storyid";
+            query = session.createQuery(hql);
+            query.setParameter("storyid",work.getStoryid());
+            List<String> temptags = query.list();
+            ArrayList<String> tags  = new ArrayList<String>();
+            for (String obj:temptags) {
+                tags.add(obj);
+                System.out.println(obj);
+            }
+
+            works.add(new StoryDetails(work,tags));
+        }
+
+        session.flush();
+        session.getTransaction().commit();
+        session.close();
+
+        return works;
     }
 
     //*******************************Tamanna****************************//

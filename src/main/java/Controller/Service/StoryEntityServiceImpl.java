@@ -159,6 +159,27 @@ public class StoryEntityServiceImpl implements StoryEntityService {
         return storyEntityRepository.getTopStories();
     }
 
+
+    @Override
+    public UserprofileEntity getWriterProfile(String profileid) {
+        return storyEntityRepository.getWriterProfile(profileid);
+    }
+
+    @Override
+    public ArrayList<Follow> getFollowingList(String profileid, String username) {
+        return storyEntityRepository.getFollowingList(profileid,username);
+    }
+
+    @Override
+    public ArrayList<Follow> getFollowerList(String profileid, String username) {
+        return storyEntityRepository.getFollowerList(profileid,username);
+    }
+
+    @Override
+    public ArrayList<StoryDetails> getWorksOfWriter(String profileid) {
+        return storyEntityRepository.getWorksOfWriter(profileid);
+    }
+
     //*******************************tamanna****************************************************//
     @Override
     public int insertStory(StoryEntity story) {
