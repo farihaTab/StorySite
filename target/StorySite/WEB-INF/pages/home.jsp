@@ -133,9 +133,9 @@
                                     </div>
                                     <div class="col-md-6 col-sm-6">
                                         <h4><a href=" <spring:url value="/story/story?id=${story.storyEntity.storyid}" /> ">
-                                                ${story.storyEntity.title}</a>
-                                        </h4>
-                                        <h5>by ${story.storyEntity.writerid}</h5>
+                                                ${story.storyEntity.title}</a></h4>
+                                        <h5><a href=" <spring:url value="/story/profile?username=${story.storyEntity.writerid}" /> ">
+                                            by ${story.storyEntity.writerid}</a></h5>
                                         <h5>${story.storyEntity.categoryname}</h5>
                                         <h6> ${story.storyEntity.readcount} reads ${story.storyEntity.likecount} likes ${story.storyEntity.chaptercount} part story</h6>
                                         <c:choose>
@@ -164,7 +164,8 @@
                                     <div class="col-md-6 col-sm-6">
                                         <h4><a href=" <spring:url value="/story/story?id=${story.storyEntity.storyid}" /> ">
                                                 ${story.storyEntity.title}</a></h4>
-                                        <h5>by ${story.storyEntity.writerid}</h5>
+                                        <h5><a href=" <spring:url value="/story/profile?username=${story.storyEntity.writerid}" /> ">
+                                            by ${story.storyEntity.writerid}</a></h5>
                                         <h5>${story.storyEntity.categoryname}</h5>
                                         <h6> ${story.storyEntity.readcount} reads ${story.storyEntity.likecount} likes ${story.storyEntity.chaptercount} part story</h6>
                                         <c:choose>
@@ -282,7 +283,8 @@
                                     <div class="col-md-6 col-sm-6">
                                         <h4><a href=" <spring:url value="/story/story?id=${story.storyEntity.storyid}" /> ">
                                                 ${story.storyEntity.title}</a></h4>
-                                        <h5>by ${story.storyEntity.writerid}</h5>
+                                        <h5><a href=" <spring:url value="/story/profile?username=${story.storyEntity.writerid}" /> ">
+                                            by ${story.storyEntity.writerid}</a></h5>
                                         <h5>${story.storyEntity.categoryname}</h5>
                                         <h6> ${story.storyEntity.readcount} reads ${story.storyEntity.likecount} likes ${story.storyEntity.chaptercount} part story</h6>
                                         <c:choose>
@@ -311,7 +313,8 @@
                                     <div class="col-md-6 col-sm-6">
                                         <h4><a href=" <spring:url value="/story/story?id=${story.storyEntity.storyid}" /> ">
                                                 ${story.storyEntity.title}</a></h4>
-                                        <h5>by ${story.storyEntity.writerid}</h5>
+                                        <h5><a href=" <spring:url value="/story/profile?username=${story.storyEntity.writerid}" /> ">
+                                            by ${story.storyEntity.writerid}</a></h5>
                                         <h5>${story.storyEntity.categoryname}</h5>
                                         <h6> ${story.storyEntity.readcount} reads ${story.storyEntity.likecount} likes ${story.storyEntity.chaptercount} part story</h6>
                                         <c:choose>
@@ -367,7 +370,8 @@
                                                 <h4><a href=" <spring:url value="/story/story?id=${story.storyEntity.storyid}" /> ">
                                                         ${story.storyEntity.title}</a>
                                                 </h4>
-                                                <h5>by ${story.storyEntity.writerid}</h5>
+                                                <h5><a href=" <spring:url value="/story/profile?username=${story.storyEntity.writerid}" /> ">
+                                                    by ${story.storyEntity.writerid}</a></h5>
                                                 <h5>${story.storyEntity.categoryname}</h5>
                                                 <h6> ${story.storyEntity.readcount} reads ${story.storyEntity.likecount} likes ${story.storyEntity.chaptercount} part story</h6>
                                                 <c:choose>
@@ -396,7 +400,8 @@
                                             <div class="col-md-6 col-sm-6">
                                                 <h4><a href=" <spring:url value="/story/story?id=${story.storyEntity.storyid}" /> ">
                                                         ${story.storyEntity.title}</a></h4>
-                                                <h5>by ${story.storyEntity.writerid}</h5>
+                                                <h5><a href=" <spring:url value="/story/profile?username=${story.storyEntity.writerid}" /> ">
+                                                    by ${story.storyEntity.writerid}</a></h5>
                                                 <h5>${story.storyEntity.categoryname}</h5>
                                                 <h6> ${story.storyEntity.readcount} reads ${story.storyEntity.likecount} likes ${story.storyEntity.chaptercount} part story</h6>
                                                 <c:choose>
@@ -452,7 +457,8 @@
                                         <div class="col-md-6 col-sm-6">
                                             <h4><a href=" <spring:url value="/story/story?id=${story.storyEntity.storyid}" /> ">
                                                     ${story.storyEntity.title}</a></h4>
-                                            <h5>by ${story.storyEntity.writerid}</h5>
+                                            <h5><a href=" <spring:url value="/story/profile?username=${story.storyEntity.writerid}" /> ">
+                                                by ${story.storyEntity.writerid}</a></h5>
                                             <h5>${story.storyEntity.categoryname}</h5>
                                             <h6> ${story.storyEntity.readcount} reads ${story.storyEntity.likecount} likes ${story.storyEntity.chaptercount} part story</h6>
                                             <c:choose>
@@ -481,7 +487,8 @@
                                         <div class="col-md-6 col-sm-6">
                                             <h4><a href=" <spring:url value="/story/story?id=${story.storyEntity.storyid}" /> ">
                                                     ${story.storyEntity.title}</a></h4>
-                                            <h5>by ${story.storyEntity.writerid}</h5>
+                                            <h5><a href=" <spring:url value="/story/profile?username=${story.storyEntity.writerid}" /> ">
+                                                by ${story.storyEntity.writerid}</a></h5>
                                             <h5>${story.storyEntity.categoryname}</h5>
                                             <h6> ${story.storyEntity.readcount} reads ${story.storyEntity.likecount} likes ${story.storyEntity.chaptercount} part story</h6>
                                             <c:choose>
@@ -533,7 +540,8 @@
                                             <h4><a href=" <spring:url value="/story/story?id=${storyentity.storyid}" /> ">
                                                     ${storyentity.storyid}</a>
                                             </h4>
-                                            <h5>by ${storyentity.writerid}</h5>
+                                            <h5><a href=" <spring:url value="/story/profile?username=${storyentity.writerid}" /> ">
+                                                by ${storyentity.writerid}</a></h5>
                                             <h5>${storyentity.categoryname}</h5>
                                             <h6> ${storyentity.readcount} reads ${storyentity.likecount} likes ${storyentity.chaptercount} part story</h6>
                                             <c:choose>
@@ -563,7 +571,8 @@
                                             <h4><a href=" <spring:url value="/story/story?id=${storyentity.storyid}" /> ">
                                                     ${storyentity.storyid}</a>
                                             </h4>
-                                            <h5>by ${storyentity.writerid}</h5>
+                                            <h5><a href=" <spring:url value="/story/profile?username=${storyentity.writerid}" /> ">
+                                                by ${storyentity.writerid}</a></h5>
                                             <h5>${storyentity.categoryname}</h5>
                                             <h6> ${storyentity.readcount} reads ${storyentity.likecount} likes ${storyentity.chaptercount} part story</h6>
                                             <c:choose>
@@ -615,7 +624,8 @@
                                             <h4><a href=" <spring:url value="/story/story?id=${storyentity.storyid}" /> ">
                                                     ${storyentity.storyid}</a>
                                             </h4>
-                                            <h5>by ${storyentity.writerid}</h5>
+                                            <h5><a href=" <spring:url value="/story/profile?username=${storyentity.writerid}" /> ">
+                                                by ${storyentity.writerid}</a></h5>
                                             <h5>${storyentity.categoryname}</h5>
                                             <h6> ${storyentity.readcount} reads ${storyentity.likecount} likes ${storyentity.chaptercount} part story</h6>
                                             <c:choose>
@@ -645,7 +655,8 @@
                                             <h4><a href=" <spring:url value="/story/story?id=${storyentity.storyid}" /> ">
                                                     ${storyentity.storyid}</a>
                                             </h4>
-                                            <h5>by ${storyentity.writerid}</h5>
+                                            <h5><a href=" <spring:url value="/story/profile?username=${storyentity.writerid}" /> ">
+                                                by ${storyentity.writerid}</a></h5>
                                             <h5>${storyentity.categoryname}</h5>
                                             <h6> ${storyentity.readcount} reads ${storyentity.likecount} likes ${storyentity.chaptercount} part story</h6>
                                             <c:choose>

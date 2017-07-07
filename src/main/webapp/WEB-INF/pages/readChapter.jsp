@@ -102,7 +102,7 @@
                     <img src="<c:url value="/resource/images/profilephoto/${story.writerid}.jpg"></c:url>" alt="author-pic" class="media-object img-circle" style="width:60px;height:60px;">
                 </div>
                 <div class="media-body">
-                    <h4 class="media-heading">By <a class="on-navigate" href=" <spring:url value="/user/username?id=${story.writerid}" /> " > ${story.writerid}</a></h4>
+                    <h4 class="media-heading">By <a class="on-navigate" href=" <spring:url value="/story/profile?username=${story.writerid}" /> " > ${story.writerid}</a></h4>
                     <div>
                         <form:form  modelAttribute="formFollow" method = "POST" action = "/StorySite/story/follow">
                             <form:input id="follower" path="follower" type="hidden" value="${username}"/>

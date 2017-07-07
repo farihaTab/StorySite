@@ -16,7 +16,7 @@
     <link rel="stylesheet"href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <title>First Name Last Name (@username)</title>
+    <title>${writerProfile.firstName} ${writerProfile.lastName} @${writerProfile.writer}</title>
 
     <style>
         textarea {
@@ -86,6 +86,7 @@
                                     <c:forEach items="${followingList}" var="following" varStatus="loop" begin="0" end="5" step="1">
                                         <div style="float: left; font-size: 9pt; text-align: center; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
                                             <img src="<c:url value="/resource/images/profilephoto/${following.username}.jpg"></c:url>" alt="author-pic" title="username" class="media-object img-circle" style="width:60px;height:60px;margin: auto;">
+                                            ${following.username}
                                             <form:form  modelAttribute="formFollow" method = "POST" action = "/StorySite/story/follow">
                                                 <form:input id="follower" path="follower" type="hidden" value="${username}"/>
                                                 <form:input id="followed" path="followed" type="hidden" value="${following.username}"/>
@@ -111,6 +112,7 @@
                                     <c:forEach items="${followerList}" var="follower" varStatus="loop" begin="0" end="5" step="1">
                                         <div style="float: left; font-size: 9pt; text-align: center; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
                                             <img src="<c:url value="/resource/images/profilephoto/${follower.username}.jpg"></c:url>" alt="author-pic" title="username" class="media-object img-circle" style="width:60px;height:60px;margin: auto;">
+                                            ${follower.username}
                                             <form:form  modelAttribute="formFollow" method = "POST" action = "/StorySite/story/follow">
                                                 <form:input id="follower" path="follower" type="hidden" value="${username}"/>
                                                 <form:input id="followed" path="followed" type="hidden" value="${follower.username}"/>
@@ -174,6 +176,7 @@
                 <c:forEach items="${followingList}" var="following">
                     <div style="float: left; font-size: 9pt; text-align: center; overflow: auto; margin-right: 1%; margin-bottom: 0.5em;">
                         <img src="<c:url value="/resource/images/profilephoto/${following.username}.jpg"></c:url>" alt="author-pic" title="username" class="media-object img-circle" style="width:150px;height:150px;margin: auto;">
+                        ${following.username}
                         <form:form  modelAttribute="formFollow" method = "POST" action = "/StorySite/story/follow">
                             <form:input id="follower" path="follower" type="hidden" value="${username}"/>
                             <form:input id="followed" path="followed" type="hidden" value="${following.username}"/>
@@ -200,6 +203,7 @@
                 <c:forEach items="${followerList}" var="follower">
                     <div style="float: left; font-size: 9pt; text-align: center; overflow: auto; margin-right: 1%; margin-bottom: 0.5em;">
                         <img src="<c:url value="/resource/images/profilephoto/${follower.username}.jpg"></c:url>" alt="author-pic" title="username" class="media-object img-circle" style="width:150px;height:150px;margin: auto;">
+                        ${follower.username}
                         <form:form  modelAttribute="formFollow" method = "POST" action = "/StorySite/story/follow">
                             <form:input id="follower" path="follower" type="hidden" value="${username}"/>
                             <form:input id="followed" path="followed" type="hidden" value="${follower.username}"/>
