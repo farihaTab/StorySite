@@ -1,5 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ include file="homeNavigation.jsp"%>
 <%--
   Created by IntelliJ IDEA.
   User: DELL
@@ -765,7 +766,7 @@
                     <div class="row">
                         <div class="col-md-5 col-sm-6">
                             <a href="#">
-                                <img src="<c:url value="/resource/images/storycover/8.jpg"></c:url>" class="img-responsive">
+                                <img src="<c:url value="/resource/images/storycover/8.jpg"></c:url>" class="img-responsive" >
                             </a>
                         </div>
                         <div class="col-md-6 col-sm-6">

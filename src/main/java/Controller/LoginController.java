@@ -12,6 +12,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import Model.*;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 /**
  * Created by MiNNiE on 28-Apr-17.
  */
@@ -24,15 +28,6 @@ public class LoginController {
     @Autowired
     LoginValidator loginValidator;
 
-    private String username;
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
 
     @RequestMapping(value="/login", method = RequestMethod.GET)
     public String login(Model model) {
@@ -42,23 +37,29 @@ public class LoginController {
     }
 
     @RequestMapping(value="/login", method = RequestMethod.POST)
-    public String loginVerification(@ModelAttribute("user") AccountuserEntity user, BindingResult result) {
+    public String loginVerification(@ModelAttribute("user") AccountuserEntity user, BindingResult result, HttpServletRequest request) {
 
         loginValidator.validate(user,result);
-
         if(result.hasErrors()) {
             return "login";
         }
-        this.username = user.getUsername();
-        return "redirect:/story";
+        HttpSession session = request.getSession();
+        session.setAttribute("username",user.getUsername());
+        System.out.println("logged in as"+user.getUsername());
+        return "redirect:/story/home";
 
     }
 
-    @RequestMapping(value="/logout", method = RequestMethod.POST)
-    public String logout(@ModelAttribute("user") AccountuserEntity user, BindingResult result) {
 
+    @RequestMapping(value = "/logout")
+    public String logout(Model model, HttpSession session){
+        session.setAttribute("username",null);
+        System.out.println("logging out ");
+        if((String)session.getAttribute("username") == null){
+            System.out.println("logout success");
+        }
+        //session.removeAttribute("username");
         return "redirect:/login";
-
     }
 
 

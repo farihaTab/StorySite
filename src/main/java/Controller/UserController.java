@@ -20,15 +20,11 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    private String username = "fariha";//loginController.getUsername();
-
     @RequestMapping(value = "/userprofile", method = RequestMethod.GET)
     public String userprofile(Model model) {
 
 
         AccountuserEntity user=new AccountuserEntity();
-        String username="tamanna";
-        userService.getUserProfile(username);
         model.addAttribute("user",user);
         return "userprofile";
     }

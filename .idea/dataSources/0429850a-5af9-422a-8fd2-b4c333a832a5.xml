@@ -4,9 +4,9 @@
     <root id="1"/>
     <schema id="2" parent="1" name="SDPROJECT">
       <ObjectId>91</ObjectId>
-      <IntrospectionTimestamp>2017-07-07.10:27:30</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2017-07-08.00:17:59</IntrospectionTimestamp>
       <CreatedTimestamp>2017-04-28.11:33:37</CreatedTimestamp>
-      <ModifiedTimestamp>2017-07-07.00:04:35</ModifiedTimestamp>
+      <ModifiedTimestamp>2017-07-07.22:03:58</ModifiedTimestamp>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>

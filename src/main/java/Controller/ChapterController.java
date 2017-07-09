@@ -34,8 +34,6 @@ public class ChapterController {
     @Autowired
     private SessionFactory sessionFactory;
 
-    private String username = "fariha";//loginController.getUsername();
-
     @RequestMapping("/stories")
     public String get(Model model) {
         return "test";

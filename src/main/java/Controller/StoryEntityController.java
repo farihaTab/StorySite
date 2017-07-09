@@ -9,10 +9,8 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.ui.Model;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Collection;
-import java.util.List;
+import javax.servlet.http.HttpSession;
+import java.util.*;
 import java.util.logging.Logger;
 
 /**
@@ -23,22 +21,59 @@ import java.util.logging.Logger;
 public class StoryEntityController {
     @Autowired
     private StoryEntityService storyEntityService;
-    private String username = "fariha";
 
 
     private static Logger logger = Logger.getLogger(StoryEntityController.class.getName());
 
+    @RequestMapping("/site")
+    public String siteHomePage(Model model){
+        return "shobdokolpo";
+    }
+
     @RequestMapping
-    public String list(Model model) {
+    public String list(Model model, HttpServletRequest request, HttpSession session ) {
+        String username = (String)session.getAttribute("username");
+        if(username == null){
+            return "redirect:/login";
+        }
         logger.info("testing stories...");
         List<StoryEntity> list = storyEntityService.getAllStory();
         model.addAttribute("stories", list );
-        logger.info("list.stories : "+list.size()+" "+list.toString());
+        System.out.println("Inside of dosomething handler method");
+
+        System.out.println("--- Model data ---");
+        Map modelMap = model.asMap();
+        for (Object modelKey : modelMap.keySet()) {
+            Object modelValue = modelMap.get(modelKey);
+            System.out.println(modelKey + " -- " + modelValue);
+        }
+
+        System.out.println("=== Request data ===");
+        java.util.Enumeration reqEnum = request.getAttributeNames();
+        while (reqEnum.hasMoreElements()) {
+            String s = (String) reqEnum.nextElement();
+            System.out.println(s);
+            System.out.println("==" + request.getAttribute(s));
+        }
+
+        System.out.println("*** Session data ***");
+        Enumeration<String> e = session.getAttributeNames();
+        while (e.hasMoreElements()){
+            String s = e.nextElement();
+            System.out.println(s);
+            System.out.println("**" + session.getAttribute(s));
+        }
         return "stories";
     }
 
     @RequestMapping(value = "/profile" ,method = RequestMethod.GET)
-    public String getProfileByUsername(@RequestParam("username") String profileid, Model model) {
+    public String getProfileByUsername(@RequestParam("username") String profileid, Model model,HttpSession session) {
+        String username = (String)session.getAttribute("username");
+        if(username == null){
+            return "redirect:/login";
+        }
+
+
         System.out.println("Get profile of "+profileid);
         model.addAttribute("username",username);
         UserprofileEntity writerProfile = storyEntityService.getWriterProfile(profileid);
@@ -60,7 +95,11 @@ public class StoryEntityController {
     }
 
     @RequestMapping(value = "/story" ,method = RequestMethod.GET)
-    public String getStoryById(@RequestParam("id") String storyid, Model model) {
+    public String getStoryById(@RequestParam("id") String storyid, Model model,HttpSession session) {
+        String username = (String)session.getAttribute("username");
+        if(username == null){
+            return "redirect:/login";
+        }
 
         logger.info("testing story...");
         StoryEntity story = storyEntityService.getStoryById(storyid);
@@ -100,7 +139,11 @@ public class StoryEntityController {
     }
 
     @RequestMapping(value = "/chapter" ,method = RequestMethod.GET)
-    public String getSChapterById(@RequestParam("id1") String storyid, @RequestParam("id2") String chapterid, Model model) {
+    public String getSChapterById(@RequestParam("id1") String storyid, @RequestParam("id2") String chapterid, Model model, HttpSession session) {
+        String username = (String)session.getAttribute("username");
+        if(username == null){
+            return "redirect:/login";
+        }
 
         storyEntityService.updateReading(username,storyid,chapterid);
         ChapterEntity chapter = storyEntityService.getChapterById(storyid,chapterid);
@@ -138,12 +181,17 @@ public class StoryEntityController {
 
         return "readChapter";
         //model.addAttribute("message","success");
-        //return "hello";
     }
 
 
     @RequestMapping(value = "/home", method = RequestMethod.GET)
-    public String homePage(HttpServletRequest request,Model model) {
+    public String homePage(HttpServletRequest request,Model model,HttpSession session) {
+        System.out.println("username paici: "+(String)session.getAttribute("username"));
+        String username = (String)session.getAttribute("username");
+        if(username == null){
+            return "redirect:/login";
+        }
+
         ArrayList<StoryDetails> recommendedStories = storyEntityService.getRecommendedStories(username);
         model.addAttribute("recommendedStories",recommendedStories);
         ArrayList<StoryDetails> continueReading = storyEntityService.getContinueReadingStories(username);
@@ -165,7 +213,11 @@ public class StoryEntityController {
 
     @RequestMapping(value = "/readstory" , method = RequestMethod.POST)
     public String handleForms(@ModelAttribute("formReading") ReadingEntity readingEntity,
-                              @RequestParam(required=false, defaultValue="") String read){
+                              @RequestParam(required=false, defaultValue="") String read,HttpSession session){
+        String username = (String)session.getAttribute("username");
+        if(username == null){
+            return "redirect:/login";
+        }
 
         if(read.equals("Read")){
             java.sql.Time time = new java.sql.Time(Calendar.getInstance().getTime().getTime());

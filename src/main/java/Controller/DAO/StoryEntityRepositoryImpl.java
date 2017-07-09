@@ -180,7 +180,7 @@ public class StoryEntityRepositoryImpl implements StoryEntityRepository {
     public void updateReading(String username, String chapterid, String storyid) {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
-        ReadingEntity readingEntity = (ReadingEntity) session.get(ReadingEntity.class, new ReadingEntityPK("fariha",Long.valueOf(storyid).longValue()));
+        ReadingEntity readingEntity = (ReadingEntity) session.get(ReadingEntity.class, new ReadingEntityPK(username,Long.valueOf(storyid).longValue()));
         if(readingEntity==null){
             ReadingEntity temp = new ReadingEntity();
             java.sql.Time time = new java.sql.Time(Calendar.getInstance().getTime().getTime());

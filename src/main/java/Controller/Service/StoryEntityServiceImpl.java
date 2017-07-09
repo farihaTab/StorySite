@@ -130,12 +130,12 @@ public class StoryEntityServiceImpl implements StoryEntityService {
         ArrayList<StoryDetails> s =  storyEntityRepository.getStorySuggestionsFromAlikeUsers(storyid,categoryname);
         if(s == null || s.size()<3){
             s = storyEntityRepository.getTopStoriesByCategoryForUser(username,categoryname);
-            for (StoryDetails ss: s
+            /*for (StoryDetails ss: s
                  ) {
                 if(ss.getStoryEntity().getStoryid() == Long.valueOf(storyid))
                     s.remove(ss);
 
-            }
+            }*/
         }
         return s;
     }

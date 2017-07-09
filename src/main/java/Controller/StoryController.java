@@ -22,6 +22,8 @@ import java.util.List;
 import java.util.Map;
 import Model.*;
 
+import javax.servlet.http.HttpSession;
+
 /**
  * Created by MiNNiE on 28-Apr-17.
  */
@@ -34,8 +36,6 @@ public class StoryController {
     NewStoryValidator newStoryValidator;
     @Autowired
     private SessionFactory sessionFactory;
-
-    private String username = "fariha";//loginController.getUsername();
 
     @RequestMapping(value = "/database",method = RequestMethod.GET)
     public String users(Model model)

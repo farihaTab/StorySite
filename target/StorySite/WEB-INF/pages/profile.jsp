@@ -68,8 +68,8 @@
 <div class="container" id="active-tabs">
     <ul class="nav nav-tabs">
         <li class="active"><a data-toggle="tab" href="#home">Profile Summary</a></li>
-        <li><a data-toggle="tab" href="#menu1">Followers</a></li>
-        <li><a data-toggle="tab" href="#menu2">Following</a></li>
+        <li><a data-toggle="tab" href="#menu1">Following</a></li>
+        <li><a data-toggle="tab" href="#menu2">Followers</a></li>
     </ul>
     <div class="tab-content">
         <div id="home" class="tab-pane fade in active">
